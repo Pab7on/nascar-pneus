@@ -92,7 +92,7 @@
   .claro { background: var(--concreto); color: var(--texto); --tinta: var(--preto); --texto: #2C2C2C; --metal: #565656; --linha: rgba(8,8,8,.14); --link: var(--preto); --foco: var(--preto); }
   .escuro-2 { background: var(--preto-2); }
   /* cards e painéis escuros mantêm as cores escuras mesmo dentro de seção clara */
-  .card, .marca-item { --tinta: #FFFFFF; --texto: #C4C4C4; --metal: #979797; --linha: rgba(255,255,255,.1); --link: var(--laranja); --foco: var(--laranja); }
+  .card { --tinta: #FFFFFF; --texto: #C4C4C4; --metal: #979797; --linha: rgba(255,255,255,.1); --link: var(--laranja); --foco: var(--laranja); }
 
   /* Tipografia: títulos grandes e pesados, texto corrido leve */
   h1, h2, h3 { font-family: var(--titulo); color: var(--tinta); text-transform: uppercase; font-weight: 700; line-height: .95; letter-spacing: 0; }
@@ -143,7 +143,7 @@
   .hero-faixas i { position: absolute; inset: 0; background: var(--laranja); clip-path: polygon(18% 0, calc(18% + 14px) 0, 14px 100%, 0 100%); }
   .hero-faixas i:nth-child(2) { background: var(--laranja-2); opacity: .75; clip-path: polygon(calc(18% + 21px) 0, calc(18% + 25px) 0, 25px 100%, 21px 100%); }
   .hero-texto { max-width: calc(46vw - max(20px, (100vw - 1200px) / 2) - 24px); padding-block: clamp(56px, 9vh, 104px); }
-  .hero h1 { font-size: clamp(2.8rem, 5vw, 5.2rem); line-height: .92; }
+  .hero h1 { font-size: clamp(2.8rem, 4vw, 4.3rem); line-height: .94; }
   .hero-sub { margin-top: 26px; font-size: clamp(1.02rem, 1.3vw, 1.14rem); color: rgba(255,255,255,.72); max-width: 27em; }
   .hero-acoes { display: flex; flex-wrap: wrap; gap: 14px 18px; margin-top: 34px; }
   .hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); font-size: .92rem; color: rgba(255,255,255,.75); }
@@ -188,17 +188,6 @@
   .serv-grade > :nth-child(4) { grid-column: span 6; }
   .serv-grade > :nth-child(5), .serv-grade > :nth-child(6) { grid-column: span 3; }
 
-  /* Marcas: faixa laranja */
-  .marcas { background: var(--laranja); color: var(--preto); padding-block: clamp(64px, 8vw, 100px); --tinta: var(--preto); --texto: var(--preto); --metal: rgba(8,8,8,.78); --linha: rgba(8,8,8,.25); --link: var(--preto); --foco: var(--preto); }
-  .marcas-linha { display: grid; grid-template-columns: minmax(260px, 1fr) 1.6fr; gap: 40px; align-items: center; }
-  .marcas .h2 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); }
-  .marcas-lista { display: grid; grid-template-columns: 1.3fr 1fr; gap: 14px; list-style: none; padding: 0; }
-  .marca-item { min-height: 128px; display: grid; place-items: center start; background: var(--preto); padding: 22px 28px; }
-  .marca-item img { max-height: 48px; width: auto; filter: grayscale(1) brightness(1.6); }
-  .marca-texto { font-family: var(--titulo); font-weight: 700; font-style: italic; font-size: 2.4rem; line-height: 1; color: var(--branco); text-transform: uppercase; }
-  .marca-texto small { display: block; margin-top: 8px; font-style: normal; font-family: var(--corpo); font-size: .85rem; font-weight: 500; text-transform: none; color: #A8A8A8; }
-  .marca-consulta { background: transparent; box-shadow: inset 0 0 0 2px var(--preto); color: var(--preto); font-weight: 500; }
-  .marca-consulta a { color: var(--preto); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
   /* Destaque recuperação de rodas */
   .destaque { overflow: hidden; }
@@ -352,7 +341,6 @@
     .aval-grade { grid-template-columns: 1fr; }
     .nota-painel { flex-direction: row; flex-wrap: wrap; align-items: center; }
     .rodape-grade { grid-template-columns: 1fr 1fr; }
-    .marcas-linha { grid-template-columns: 1fr; gap: 28px; }
     .serv-grade > :nth-child(1) { grid-column: 1 / -1; grid-row: auto; }
     .serv-grade > :nth-child(2), .serv-grade > :nth-child(3) { grid-column: span 6; }
     .serv-grade > :nth-child(4) { grid-column: 1 / -1; }
@@ -408,7 +396,6 @@
     .serv-grade .card:not(.capa) .card-corpo { padding: 16px 16px 18px; gap: 4px; }
     .serv-grade .card:not(.capa) h3 { font-size: 1.3rem; }
     .serv-grade .card:not(.capa) p { font-size: .9rem; }
-    .marcas-lista { grid-template-columns: 1fr; }
     .fatos { grid-template-columns: 1fr 1fr; }
     .fato { padding: 16px; }
     .nota-num { font-size: 5rem; }
@@ -462,7 +449,7 @@
       <a href="#servicos">Serviços</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
-      <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento.">Solicitar orçamento</a>
+      <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento.">Pedir preço no WhatsApp</a>
     </nav>
   </div>
 </header>
@@ -477,11 +464,11 @@
     </div>
     <div class="envolve">
       <div class="hero-texto">
-        <h1 id="hero-titulo">Performance e qualidade para seguir em frente.</h1>
-        <p class="hero-sub">Pneus, rodas e soluções automotivas para quem valoriza segurança, desempenho e qualidade.</p>
+        <h1 id="hero-titulo">Seu pneu resolvido no Centro de Ibiúna, de segunda a sábado.</h1>
+        <p class="hero-sub">Aqui na Nascar, na Av. Antônio Falci, a gente cuida de pneu e roda de carro e moto desde 2018. Manda a medida pelo WhatsApp que eu já te passo o preço.</p>
         <div class="hero-acoes">
-          <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Solicitar orçamento</a>
-          <a class="btn btn-contorno" href="#servicos"><span>Conhecer serviços</span></a>
+          <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Pedir preço pelo WhatsApp</a>
+          <a class="btn btn-contorno" href="#servicos"><span>Ver o que a gente faz</span></a>
         </div>
         <div class="hero-meta">
           <span><svg class="ico estrela" aria-hidden="true"><use href="#i-estrela"/></svg><span><b>4,5</b> no Google, 123 avaliações</span></span>
@@ -495,50 +482,36 @@
   <section class="secao claro" id="produtos" aria-labelledby="produtos-titulo">
     <div class="envolve">
       <div class="cabeca">
-        <div><h2 class="h2" id="produtos-titulo">Tudo para equipar seu veículo.</h2></div>
-        <p class="lead">Medidas e marcas variam conforme o estoque. Consulte a disponibilidade pelo WhatsApp e receba o orçamento na hora.</p>
+        <div><h2 class="h2" id="produtos-titulo">Pneu, roda e câmara pra carro e moto, tudo na mesma loja.</h2></div>
+        <p class="lead">O estoque muda toda semana. Me manda a medida do pneu (vem escrita na lateral, tipo 175/70 R14) que eu confirmo se tem e quanto fica.</p>
       </div>
       <div class="prod-grade">
         <article class="card capa">
           <div class="card-foto"><img src="img/pneus-carro.webp" alt="Pneus automotivos empilhados" width="900" height="600" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Pneus automotivos</h3><p>Pneus para carro, com montagem feita na própria loja.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar a disponibilidade de pneus para o meu carro. A medida é: ">Consultar disponibilidade</a></div>
+          <div class="card-corpo"><h3>Pneus automotivos</h3><p>Pneu de carro com a montagem feita aqui mesmo. Você compra e já sai rodando.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar a disponibilidade de pneus para o meu carro. A medida é: ">Consultar minha medida</a></div>
         </article>
         <article class="card" style="--atraso:.06s">
           <div class="card-foto"><img src="img/pneus-moto.webp" alt="Mecânico trabalhando em uma motocicleta" width="900" height="600" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Pneus para motocicletas</h3><p>Pneus para moto do dia a dia, trabalho e estrada.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar a disponibilidade de pneus para a minha moto. A medida é: ">Consultar disponibilidade</a></div>
+          <div class="card-corpo"><h3>Pneus para motocicletas</h3><p>Pra moto do dia a dia, do trabalho ou de estrada.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar a disponibilidade de pneus para a minha moto. A medida é: ">Consultar minha medida</a></div>
         </article>
         <article class="card">
           <div class="card-foto"><img src="img/rodas.webp" alt="Roda de liga leve sobre pneus empilhados" width="900" height="863" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Rodas esportivas</h3><p>Rodas para deixar o carro do seu jeito.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar rodas. Meu carro é: ">Consultar disponibilidade</a></div>
+          <div class="card-corpo"><h3>Rodas esportivas</h3><p>Quer mudar a cara do carro? Vem ver as rodas que a gente tem.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar rodas. Meu carro é: ">Ver rodas pelo WhatsApp</a></div>
         </article>
         <article class="card" style="--atraso:.06s">
           <div class="card-foto"><img src="img/camaras.webp" alt="Pneus em estoque" width="900" height="600" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Câmaras de ar</h3><p>Câmaras de ar para moto e outros veículos.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar câmara de ar. A medida é: ">Consultar disponibilidade</a></div>
+          <div class="card-corpo"><h3>Câmaras de ar</h3><p>Câmara pra moto e outros veículos, na medida certa.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar câmara de ar. A medida é: ">Consultar minha medida</a></div>
         </article>
         <article class="card capa" style="--atraso:.12s">
           <div class="card-foto"><img src="img/loja-acessorios.webp" alt="Produtos e acessórios expostos na loja da Nascar" width="900" height="1080" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Acessórios automotivos</h3><p>Acessórios e produtos para o seu carro, direto da loja.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar acessórios automotivos. Procuro: ">Consultar disponibilidade</a></div>
+          <div class="card-corpo"><h3>Acessórios automotivos</h3><p>Produtos pro seu carro, pra levar na hora.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar acessórios automotivos. Procuro: ">Perguntar pelo WhatsApp</a></div>
         </article>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== MARCAS =====
-       Para adicionar uma marca: copie um <li class="marca-item"> e troque o texto por
-       <img src="img/marcas/NOME.svg" alt="NOME" loading="lazy">.
-       Só incluir marcas que a Nascar confirmar que vende. -->
-  <section class="marcas" aria-labelledby="marcas-titulo">
-    <div class="envolve marcas-linha">
-      <div><h2 class="h2" id="marcas-titulo">Trabalhamos com grandes marcas.</h2></div>
-      <ul class="marcas-lista" style="--atraso:.08s">
-        <li class="marca-item"><span class="marca-texto">Maggion<small>Pneus e câmaras</small></span></li>
-        <li class="marca-item marca-consulta"><span>Procurando outra marca?<br><a href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e queria saber quais marcas de pneu vocês têm para a medida: ">Consulte pelo WhatsApp</a></span></li>
-      </ul>
     </div>
   </section>
 
@@ -546,38 +519,38 @@
   <section class="secao" id="servicos" aria-labelledby="servicos-titulo">
     <div class="envolve">
       <div class="cabeca">
-        <div><h2 class="h2" id="servicos-titulo">Cuidado e precisão em cada detalhe.</h2></div>
-        <p class="lead">Do pneu furado à roda trincada: serviço para carro e moto no mesmo lugar. Toque em um serviço para pedir o orçamento.</p>
+        <div><h2 class="h2" id="servicos-titulo">Carro ou moto, a gente resolve no mesmo lugar.</h2></div>
+        <p class="lead">Do pneu furado à roda trincada. Escolhe o serviço e manda mensagem que a gente te passa o orçamento.</p>
       </div>
       <div class="serv-grade">
         <article class="card capa">
           <div class="card-foto"><img src="img/montagem.webp" alt="Profissional com luvas conferindo um pneu" width="900" height="600" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Montagem de pneus</h3><p>Troca e montagem de pneus de carro e moto, feita na hora.</p>
+          <div class="card-corpo"><h3>Montagem de pneus</h3><p>Comprou o pneu? A gente monta na hora.</p>
             <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de montagem/troca de pneus.">Pedir orçamento</a></div>
         </article>
         <article class="card deitado" style="--atraso:.06s">
-          <div class="card-foto"><img src="img/balanceamento.webp" alt="Cubo de roda com disco de freio, com a roda fora do carro" width="900" height="601" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Balanceamento</h3><p>Rodas balanceadas para rodar sem vibração no volante.</p>
+          <div class="card-foto"><img src="img/servico-balanceamento.webp" alt="Profissional encaixando uma roda de carro na máquina de balanceamento" width="469" height="426" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Balanceamento</h3><p>Chega de volante tremendo. Roda balanceada, viagem tranquila.</p>
             <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de balanceamento.">Pedir orçamento</a></div>
         </article>
         <article class="card deitado" style="--atraso:.12s">
-          <div class="card-foto"><img src="img/loja-interior.webp" alt="Pneus em estoque dentro da loja da Nascar" width="480" height="520" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Vulcanização e borracharia</h3><p>Conserto de pneu furado ou cortado, quando o reparo é possível, sem precisar trocar.</p>
+          <div class="card-foto"><img src="img/servico-vulcanizacao.webp" alt="Mãos colocando reparo em um pneu furado" width="900" height="900" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Vulcanização e borracharia</h3><p>Furou ou cortou? Se der pra consertar, a gente conserta e você não gasta com pneu novo.</p>
             <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de vulcanização/conserto de pneu.">Pedir orçamento</a></div>
         </article>
         <article class="card deitado">
-          <div class="card-foto"><img src="img/motos.webp" alt="Mecânico trabalhando em uma moto" width="900" height="600" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Serviços para motos</h3><p>Pneus, câmaras de ar e manutenção para a sua moto.</p>
+          <div class="card-foto"><img src="img/servico-motos.webp" alt="Mecânico de luvas trabalhando na roda dianteira de uma moto" width="736" height="1277" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Serviços para motos</h3><p>Pneu, câmara e manutenção pra sua moto, no mesmo lugar onde você cuida do carro.</p>
             <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de serviço para a minha moto.">Pedir orçamento</a></div>
         </article>
         <article class="card" style="--atraso:.06s">
-          <div class="card-foto"><img src="img/recuperacao.webp" alt="Ferramentas organizadas na bancada" width="900" height="600" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Recuperação de rodas</h3><p>Roda amassada, riscada ou trincada avaliada e reformada.</p>
+          <div class="card-foto"><img src="img/servico-recuperacao.webp" alt="Profissional de luvas lixando a borda de uma roda de liga leve" width="900" height="1350" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Recuperação de rodas</h3><p>Roda amassada, riscada ou trincada? A gente avalia e, se tiver jeito, deixa ela inteira de novo.</p>
             <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de recuperação de rodas.">Pedir orçamento</a></div>
         </article>
         <article class="card" style="--atraso:.12s">
-          <div class="card-foto"><img src="img/solda.webp" alt="Mãos de profissional trabalhando com ferramenta" width="900" height="675" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Solda em alumínio</h3><p>Reparo de trincas em rodas de liga leve, depois de avaliar a peça.</p>
+          <div class="card-foto"><img src="img/servico-solda.webp" alt="Faíscas de solda sobre uma roda de alumínio" width="236" height="354" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Solda em alumínio</h3><p>Trinca em roda de liga leve muitas vezes tem conserto, sem precisar comprar roda nova.</p>
             <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de solda em alumínio na roda.">Pedir orçamento</a></div>
         </article>
       </div>
@@ -590,14 +563,14 @@
       <div class="destaque-grade">
         <figure class="destaque-foto"><img src="img/roda-detalhe.webp" alt="Detalhe dos raios de uma roda de liga leve" width="900" height="900" loading="lazy" decoding="async"><figcaption>Recuperação de rodas</figcaption></figure>
         <div style="--atraso:.08s">
-          <h2 id="rodas-titulo">Recupere suas rodas. Renove o visual do seu veículo.</h2>
+          <h2 id="rodas-titulo">Roda feia ou trincada não precisa ir pro lixo.</h2>
           <ol class="passos">
-            <li><div><strong>Avaliação</strong><span>Mande uma foto da roda pelo WhatsApp ou passe na loja.</span></div></li>
-            <li><div><strong>Orçamento</strong><span>A equipe confere o estado da peça e diz se dá para recuperar e quanto fica.</span></div></li>
-            <li><div><strong>Serviço</strong><span>Reforma da roda ou solda em alumínio, conforme o caso.</span></div></li>
+            <li><div><strong>Manda uma foto</strong><span>Tira foto da roda e manda no WhatsApp, ou passa aqui na loja.</span></div></li>
+            <li><div><strong>A gente te fala se tem jeito</strong><span>Olhamos a roda e dizemos se dá pra recuperar e quanto fica, antes de fazer qualquer coisa.</span></div></li>
+            <li><div><strong>Sua roda volta pro carro</strong><span>Fazemos a reforma ou a solda, conforme o caso.</span></div></li>
           </ol>
-          <p class="aviso"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span>Toda roda passa por avaliação técnica antes. O resultado depende do estado da peça.</span></p>
-          <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar uma avaliação para recuperar minha roda. Vou mandar uma foto.">Solicitar avaliação</a>
+          <p class="aviso"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span>Nem toda roda tem conserto. Por isso a gente avalia antes e te fala a verdade.</span></p>
+          <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar uma avaliação para recuperar minha roda. Vou mandar uma foto.">Mandar foto da roda</a>
         </div>
       </div>
       <!-- ANTES E DEPOIS (aguardando fotos reais da Nascar). Para ativar, salve as fotos em img/ e descomente:
@@ -613,14 +586,14 @@
   <section class="secao escuro-2" id="sobre" aria-labelledby="sobre-titulo">
     <div class="envolve sobre-grade">
       <div class="sobre-texto">
-        <h2 class="h2" id="sobre-titulo">Mais que produtos. Compromisso com seu veículo.</h2>
-        <p class="lead">A Nascar 7 Rodas e Pneus atende Ibiúna desde 2018, na Av. Antônio Falci, no Centro.</p>
-        <p>Pneus, rodas, câmaras de ar e acessórios ficam na loja, e os serviços de carro e moto são feitos ali mesmo. Atendimento de segunda a sábado, com orçamento também pelo WhatsApp.</p>
+        <h2 class="h2" id="sobre-titulo">Desde 2018 cuidando dos carros e motos de Ibiúna.</h2>
+        <p class="lead">A Nascar 7 fica na Av. Antônio Falci, 1200, no Centro.</p>
+        <p>Aqui você acha o pneu, a roda e a câmara, e já sai com o serviço feito. A gente abre de segunda a sábado, e no sábado vai até as 18h, pra quem trabalha a semana toda.</p>
         <div class="fatos">
-          <div class="fato"><strong>2018</strong><span>Atendendo em Ibiúna</span></div>
+          <div class="fato"><strong>2018</strong><span>O ano em que abrimos</span></div>
           <div class="fato"><strong>4,5<svg class="ico" aria-hidden="true"><use href="#i-estrela"/></svg></strong><span>Nota no Google</span></div>
-          <div class="fato"><strong>123</strong><span>Avaliações de clientes</span></div>
-          <div class="fato"><strong>Seg a Sáb</strong><span>Aberto também aos sábados</span></div>
+          <div class="fato"><strong>123</strong><span>Clientes que avaliaram a gente</span></div>
+          <div class="fato"><strong>Sáb. até 18h</strong><span>Pra quem trabalha na semana</span></div>
         </div>
       </div>
       <figure class="sobre-foto" style="--atraso:.08s"><img src="img/loja-fachada.webp" alt="Fachada da Nascar Pneus em Ibiúna, com pneus em estoque e a porta laranja com o número 7" width="1400" height="1050" loading="lazy" decoding="async"><figcaption>A loja da Nascar, na Av. Antônio Falci</figcaption></figure>
@@ -631,8 +604,8 @@
   <section class="secao claro" id="avaliacoes" aria-labelledby="aval-titulo">
     <div class="envolve">
       <div class="cabeca">
-        <div><h2 class="h2" id="aval-titulo">Quem já passou pela Nascar.</h2></div>
-        <p class="lead">Avaliações reais de clientes no Google.</p>
+        <div><h2 class="h2" id="aval-titulo">Não precisa acreditar em mim: veja o que 123 clientes falaram.</h2></div>
+        <p class="lead">Avaliações reais, do jeito que estão no Google.</p>
       </div>
       <div class="aval-grade">
         <div class="nota-painel">
@@ -640,8 +613,8 @@
             <div class="nota-num" aria-label="Nota 4,5 de 5">4,5</div>
             <div class="estrelas" aria-hidden="true"><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-meia"/></svg></div>
           </div>
-          <p>Média de 123 avaliações de clientes no Google.</p>
-          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Nascar%20Pneus&amp;query_place_id=ChIJ49O8iaN2z5QR4P9HhAGjmFs" target="_blank" rel="noopener">Ver no Google</a>
+          <p>Média de 123 avaliações no Google.</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Nascar%20Pneus&amp;query_place_id=ChIJ49O8iaN2z5QR4P9HhAGjmFs" target="_blank" rel="noopener">Ler todas no Google</a>
         </div>
         <div class="depo-lista">
           <figure class="depo"><div class="estrelas" aria-label="5 estrelas"><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg></div>
@@ -669,8 +642,8 @@
   <section class="secao" id="galeria" aria-labelledby="galeria-titulo">
     <div class="envolve">
       <div class="cabeca">
-        <div><h2 class="h2" id="galeria-titulo">Conheça a loja.</h2></div>
-        <p class="lead">Toque em uma foto para ampliar.</p>
+        <div><h2 class="h2" id="galeria-titulo">Passa aqui pra conhecer a loja.</h2></div>
+        <p class="lead">Toque na foto pra ver maior.</p>
       </div>
       <div class="galeria">
         <button type="button" data-src="img/loja-fachada-noite.webp" data-legenda="A loja à noite, com a placa iluminada"><img src="img/loja-fachada-noite.webp" alt="Fachada da Nascar à noite, com a placa iluminada" width="1360" height="1020" loading="lazy" decoding="async"></button>
@@ -687,10 +660,10 @@
     <div class="envolve">
       <div class="contato-cta">
         <div>
-          <h2 id="contato-titulo">Precisa de pneus ou serviços automotivos?</h2>
-          <p>Entre em contato com nossa equipe e encontre a solução ideal para seu veículo.</p>
+          <h2 id="contato-titulo">Me fala a medida do pneu e eu te passo o preço.</h2>
+          <p>Pelo WhatsApp é mais rápido. Manda a medida, uma foto ou explica o problema que a gente te responde.</p>
         </div>
-        <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero falar com a Nascar."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Falar com a Nascar pelo WhatsApp</a>
+        <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero falar com a Nascar."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Chamar no WhatsApp</a>
       </div>
 
       <div class="contato-grade">
@@ -716,7 +689,7 @@
         <div style="--atraso:.08s">
           <div class="mapa"><iframe title="Mapa: Nascar 7 Rodas e Pneus em Ibiúna" src="https://maps.google.com/maps?q=Nascar%20Pneus%2C%20Av.%20Ant%C3%B4nio%20Falci%2C%201200%2C%20Ibi%C3%BAna%20SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
           <div class="mapa-acoes">
-            <a class="link-seta" href="https://www.google.com/maps/dir/?api=1&amp;destination=Nascar%20Pneus&amp;destination_place_id=ChIJ49O8iaN2z5QR4P9HhAGjmFs" target="_blank" rel="noopener">Como chegar</a>
+            <a class="link-seta" href="https://www.google.com/maps/dir/?api=1&amp;destination=Nascar%20Pneus&amp;destination_place_id=ChIJ49O8iaN2z5QR4P9HhAGjmFs" target="_blank" rel="noopener">Abrir rota no Google Maps</a>
           </div>
         </div>
       </div>
@@ -730,7 +703,7 @@
     <div class="rodape-grade">
       <div class="rodape-marca">
         <picture><source srcset="img/logo-nascar7.webp" type="image/webp"><img src="img/logo-nascar7.png" alt="Nascar 7 Rodas e Pneus" width="640" height="337" loading="lazy"></picture>
-        <p>Pneus, rodas, acessórios e serviços para carros e motos no Centro de Ibiúna/SP.</p>
+        <p>Pneus, rodas e borracharia pra carro e moto no Centro de Ibiúna, desde 2018.</p>
       </div>
       <div>
         <h3>Navegação</h3>
@@ -757,7 +730,7 @@
   </div>
 </footer>
 
-<a class="wa-flutuante" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento." aria-label="Falar com a Nascar pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span class="dica" aria-hidden="true">Fale com a Nascar</span></a>
+<a class="wa-flutuante" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento." aria-label="Chamar a Nascar no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span class="dica" aria-hidden="true">Chamar a Nascar</span></a>
 
 <dialog class="lightbox" aria-label="Foto ampliada">
   <img src="" alt="">
