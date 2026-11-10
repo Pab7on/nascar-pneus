@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- PRÉVIA: manter noindex até a Nascar aprovar e o site ir para o domínio próprio. Ao publicar, remover esta linha e o header em vercel.json. -->
+<meta name="robots" content="noindex, nofollow">
+<title>Nascar 7 Rodas e Pneus | Pneus, rodas e serviços em Ibiúna/SP</title>
+<meta name="description" content="Nascar 7 Rodas e Pneus no Centro de Ibiúna/SP: pneus para carro e moto, rodas, câmaras de ar, acessórios, montagem, balanceamento, vulcanização, recuperação de rodas e solda em alumínio. Orçamento pelo WhatsApp.">
+<link rel="canonical" href="https://nascar-pneus.vercel.app/">
+<meta name="theme-color" content="#080808">
+<meta name="format-detection" content="telephone=no">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Nascar 7 Rodas e Pneus">
+<meta property="og:title" content="Nascar 7 Rodas e Pneus | Ibiúna/SP">
+<meta property="og:description" content="Pneus, rodas e serviços para carros e motos no Centro de Ibiúna. Orçamento pelo WhatsApp.">
+<meta property="og:url" content="https://nascar-pneus.vercel.app/">
+<meta property="og:image" content="https://nascar-pneus.vercel.app/img/og-nascar7.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Logo Nascar 7 Rodas e Pneus">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-fachada.webp" imagesrcset="img/hero-fachada-800.webp 800w, img/hero-fachada.webp 1448w" imagesizes="100vw" fetchpriority="high">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TireShop",
+  "@id": "https://nascar-pneus.vercel.app/#loja",
+  "name": "Nascar 7 Rodas e Pneus",
+  "alternateName": ["Nascar Pneus", "NASCAR7"],
+  "description": "Pneus para carro e moto, rodas, câmaras de ar, acessórios, montagem, balanceamento, vulcanização, recuperação de rodas e solda em alumínio em Ibiúna/SP.",
+  "url": "https://nascar-pneus.vercel.app/",
+  "image": "https://nascar-pneus.vercel.app/img/loja-fachada-noite.webp",
+  "logo": "https://nascar-pneus.vercel.app/img/logo-nascar7.png",
+  "telephone": "+55-15-99604-0822",
+  "foundingDate": "2018",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Antônio Falci, 1200",
+    "addressLocality": "Ibiúna",
+    "addressRegion": "SP",
+    "postalCode": "18150-000",
+    "addressCountry": "BR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": -23.649083, "longitude": -47.220676 },
+  "areaServed": { "@type": "City", "name": "Ibiúna" },
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Nascar%20Pneus&query_place_id=ChIJ49O8iaN2z5QR4P9HhAGjmFs",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" }
+  ],
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "123", "bestRating": "5" }
+}
+</script>
+
+<style>
+  :root {
+    --preto: #080808; --preto-2: #121212; --grafite: #1D1D1D; --grafite-2: #262626;
+    --laranja: #FF6500; --laranja-2: #FF7A00; --branco: #FFFFFF; --metal: #A8A8A8;
+    --texto: #D6D6D6; --linha: rgba(255,255,255,.09);
+    --titulo: 'Oswald', 'Arial Narrow', Impact, sans-serif;
+    --corpo: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --topo: 84px;
+    --ease: cubic-bezier(.2,.7,.2,1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--topo) + 8px); -webkit-text-size-adjust: 100%; }
+  body { font-family: var(--corpo); background: var(--preto); color: var(--texto); line-height: 1.6; font-size: 1rem; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--laranja); outline-offset: 3px; }
+  .envolve { width: min(1200px, 100% - 40px); margin-inline: auto; }
+  .ico { width: 1.15em; height: 1.15em; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .ico-cheio { fill: currentColor; stroke: none; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .pular { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--laranja); color: var(--preto); padding: 10px 16px; font-weight: 700; }
+  .pular:focus { top: 12px; }
+
+  /* Tipografia */
+  h1, h2, h3, .t { font-family: var(--titulo); color: var(--branco); text-transform: uppercase; font-weight: 700; line-height: 1.02; letter-spacing: .01em; }
+  .inclina { display: inline-block; transform: skewX(-7deg); }
+  .rotulo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--titulo); font-weight: 500; font-size: .86rem; letter-spacing: .22em; text-transform: uppercase; color: var(--laranja); }
+  .rotulo::before { content: ''; width: 26px; height: 3px; background: var(--laranja); transform: skewX(-30deg); }
+  .laranja { color: var(--laranja); }
+  .h2 { font-size: clamp(2.1rem, 5vw, 3.6rem); margin-top: 14px; }
+  .lead { color: var(--metal); max-width: 34em; font-size: 1.04rem; }
+  .cabeca { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: clamp(32px, 5vw, 52px); }
+
+  /* Botões: formato de paralelogramo, inspirado nas faixas da logo */
+  .btn { --cor: var(--laranja); position: relative; display: inline-flex; align-items: center; justify-content: center; gap: .6em; min-height: 52px; padding: .9em 1.7em; font-family: var(--titulo); font-weight: 600; font-size: 1rem; letter-spacing: .06em; text-transform: uppercase; color: var(--preto); background: var(--cor); clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%); transition: background-color .2s ease, color .2s ease, transform .2s var(--ease); }
+  .btn:hover { background: var(--laranja-2); transform: translateY(-2px); }
+  .btn:active { transform: translateY(0); }
+  .btn .ico { width: 1.25em; height: 1.25em; }
+  .btn-contorno { background: transparent; color: var(--branco); box-shadow: inset 0 0 0 2px rgba(255,255,255,.5); clip-path: none; transform: skewX(-12deg); }
+  .btn-contorno span { display: inline-flex; align-items: center; gap: .6em; transform: skewX(12deg); }
+  .btn-contorno:hover { background: var(--branco); color: var(--preto); transform: skewX(-12deg) translateY(-2px); box-shadow: inset 0 0 0 2px var(--branco); }
+  .link-seta { display: inline-flex; align-items: center; gap: 8px; font-family: var(--titulo); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: .92rem; color: var(--laranja); }
+  .link-seta .ico { transition: transform .2s var(--ease); }
+  .link-seta:hover .ico { transform: translateX(4px); }
+
+  /* ===== Header ===== */
+  .topo { position: sticky; top: 0; z-index: 50; background: rgba(8,8,8,.94); border-bottom: 1px solid var(--linha); backdrop-filter: saturate(140%) blur(6px); transition: box-shadow .3s ease; }
+  .topo.rolou { box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+  .topo .envolve { height: var(--topo); display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: height .3s var(--ease); }
+  .topo.rolou .envolve { height: 68px; }
+  .marca { display: flex; align-items: center; flex: none; }
+  .marca img { height: 66px; width: auto; transition: height .3s var(--ease); }
+  .topo.rolou .marca img { height: 52px; }
+  .marca .compacta { display: none; }
+  .menu { display: flex; align-items: center; gap: clamp(18px, 2.6vw, 34px); }
+  .menu a:not(.btn) { position: relative; font-family: var(--titulo); font-weight: 500; font-size: .95rem; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.75); padding-block: 8px; transition: color .2s ease; }
+  .menu a:not(.btn)::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--laranja); transform: scaleX(0) skewX(-30deg); transform-origin: left; transition: transform .25s var(--ease); }
+  .menu a:not(.btn):hover, .menu a.ativo { color: var(--branco); }
+  .menu a:not(.btn):hover::after, .menu a.ativo::after { transform: scaleX(1) skewX(-30deg); }
+  .menu .btn { min-height: 46px; padding: .7em 1.4em; font-size: .92rem; margin-left: 6px; }
+  .abre-menu { display: none; width: 46px; height: 46px; place-items: center; }
+  .abre-menu span, .abre-menu span::before, .abre-menu span::after { display: block; width: 24px; height: 2px; background: var(--branco); position: relative; transition: transform .25s var(--ease), background-color .2s; }
+  .abre-menu span::before, .abre-menu span::after { content: ''; position: absolute; left: 0; }
+  .abre-menu span::before { top: -7px; } .abre-menu span::after { top: 7px; width: 16px; background: var(--laranja); }
+  .abre-menu[aria-expanded="true"] span { background: transparent; }
+  .abre-menu[aria-expanded="true"] span::before { transform: translateY(7px) rotate(45deg); }
+  .abre-menu[aria-expanded="true"] span::after { transform: translateY(-7px) rotate(-45deg); width: 24px; background: var(--branco); }
+
+  /* ===== Hero ===== */
+  .hero { position: relative; background: var(--preto); overflow: hidden; isolation: isolate; }
+  .hero-foto { position: relative; z-index: -2; height: clamp(380px, min(58vw, calc(100svh - var(--topo) - 150px)), 820px); }
+  .hero-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; }
+  .hero-foto::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, var(--preto) 0%, rgba(8,8,8,.75) 12%, rgba(8,8,8,0) 30%); }
+  /* faixas diagonais laranja no canto, como na logo */
+  .hero-faixas { position: absolute; right: 0; bottom: 0; width: 220px; height: 200px; overflow: hidden; z-index: -1; pointer-events: none; }
+  .hero-faixas i { position: absolute; bottom: -10px; height: 120%; width: 16px; background: var(--laranja); transform: skewX(-38deg); transform-origin: bottom; right: 30px; }
+  .hero-faixas i:nth-child(2) { right: 70px; width: 8px; background: var(--laranja-2); opacity: .8; }
+  .hero-faixas i:nth-child(3) { right: 96px; width: 3px; background: var(--metal); opacity: .45; }
+  .hero-conteudo { position: relative; margin-top: -84px; padding-bottom: clamp(48px, 7vh, 80px); }
+  .hero-lado { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 18px 48px; margin-top: 22px; }
+  .hero-lado .hero-sub { margin-top: 0; }
+  .hero-lado .hero-acoes { margin-top: 0; }
+  .hero-lado .hero-meta { grid-column: 1 / -1; margin-top: 6px; max-width: none; }
+  .hero h1 { font-size: clamp(2.4rem, 4.6vw, 4.3rem); line-height: .98; margin-top: 16px; text-shadow: 0 2px 24px rgba(0,0,0,.6); }
+  .hero h1 .linha { display: block; }
+  .hero h1 .inclina { transform: skewX(-8deg); }
+  .hero-sub { margin-top: 20px; font-size: clamp(1.02rem, 1.4vw, 1.16rem); color: rgba(255,255,255,.8); max-width: 30em; }
+  .hero-acoes { display: flex; flex-wrap: wrap; gap: 14px 18px; margin-top: 30px; }
+  .hero-meta { max-width: 540px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--linha); font-size: .92rem; color: rgba(255,255,255,.82); }
+  .hero-meta > * { display: inline-flex; align-items: center; gap: 8px; }
+  .hero-meta b { color: var(--branco); }
+  .estrela { color: #FFB800; }
+  .status-ponto { width: 9px; height: 9px; border-radius: 50%; background: #8a8a8a; flex: none; }
+  [data-aberto="sim"] .status-ponto { background: #2BD46A; box-shadow: 0 0 0 0 rgba(43,212,106,.6); animation: pulsa 2.2s infinite; }
+  @keyframes pulsa { 70% { box-shadow: 0 0 0 9px rgba(43,212,106,0); } 100% { box-shadow: 0 0 0 0 rgba(43,212,106,0); } }
+
+
+  /* ===== Seções ===== */
+  .secao { padding-block: clamp(72px, 10vw, 128px); position: relative; }
+  .secao-alt { background: var(--preto-2); }
+
+  /* Produtos */
+  .prod-grade { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .card { position: relative; display: flex; flex-direction: column; background: var(--grafite); overflow: hidden; border: 1px solid var(--linha); transition: transform .35s var(--ease), border-color .35s, box-shadow .35s; }
+  .card:hover { transform: translateY(-6px); border-color: rgba(255,101,0,.55); box-shadow: 0 22px 40px -18px rgba(0,0,0,.8); }
+  .card-foto { position: relative; overflow: hidden; aspect-ratio: 16 / 11; background: var(--preto-2); }
+  .card-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease), filter .4s; filter: saturate(.9) brightness(.92); }
+  .card:hover .card-foto img { transform: scale(1.06); filter: saturate(1) brightness(1); }
+  .card-foto::after { content: ''; position: absolute; inset: auto 0 0; height: 45%; background: linear-gradient(0deg, var(--grafite), transparent); }
+  .card-num { position: absolute; top: 14px; left: 16px; z-index: 1; font-family: var(--titulo); font-weight: 600; font-size: .85rem; letter-spacing: .14em; color: var(--preto); background: var(--laranja); padding: 3px 12px; clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); }
+  .card-corpo { padding: 6px 24px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .card h3 { font-size: 1.5rem; }
+  .card p { font-size: .95rem; color: var(--metal); flex: 1; }
+  .card .link-seta { margin-top: 10px; }
+  .card::before { content: ''; position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: var(--laranja); transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease); z-index: 2; }
+  .card:hover::before { transform: scaleX(1); }
+  .prod-grade .card { grid-column: span 2; }
+  .prod-grade .card.largo { grid-column: span 3; }
+  .prod-grade .card.largo .card-foto { aspect-ratio: 16 / 9; }
+
+  /* Marcas */
+  .marcas { background: var(--grafite); padding-block: clamp(56px, 7vw, 84px); border-block: 1px solid var(--linha); }
+  .marcas-linha { display: grid; grid-template-columns: minmax(260px, 1fr) 2fr; gap: 40px; align-items: center; }
+  .marcas .h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); }
+  .marcas-lista { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; list-style: none; padding: 0; }
+  .marca-item { height: 104px; display: grid; place-items: center; background: var(--preto); border: 1px solid var(--linha); padding: 18px 24px; transition: border-color .3s; }
+  .marca-item:hover { border-color: rgba(255,101,0,.5); }
+  .marca-item img { max-height: 48px; width: auto; filter: grayscale(1) brightness(1.6); opacity: .85; transition: filter .3s, opacity .3s; }
+  .marca-item:hover img { filter: none; opacity: 1; }
+  .marca-texto { font-family: var(--titulo); font-weight: 700; font-style: italic; font-size: 1.9rem; letter-spacing: .02em; color: var(--branco); text-transform: uppercase; }
+  .marca-texto small { display: block; font-style: normal; font-family: var(--corpo); font-size: .66rem; font-weight: 600; letter-spacing: .2em; color: var(--metal); text-align: center; }
+  .marca-consulta { background: transparent; border-style: dashed; text-align: center; font-size: .9rem; color: var(--metal); }
+  .marca-consulta a { color: var(--laranja); font-weight: 600; }
+
+  /* Serviços */
+  .serv-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .serv-grade .card-foto { aspect-ratio: 16 / 10; }
+
+  /* Destaque recuperação de rodas */
+  .destaque { background: var(--preto); overflow: hidden; }
+  .destaque-grade { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(36px, 6vw, 80px); align-items: center; }
+  .destaque-foto { position: relative; }
+  .destaque-foto img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%); filter: contrast(1.1); }
+  .destaque-foto::before { content: ''; position: absolute; top: 8%; bottom: -6%; right: 4%; width: 12px; background: var(--laranja); transform: skewX(-8deg); }
+  .destaque-foto figcaption { position: absolute; left: 0; bottom: 22px; background: var(--laranja); color: var(--preto); font-family: var(--titulo); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: .85rem; padding: 8px 18px 8px 16px; clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%); }
+  .destaque h2 { font-size: clamp(2rem, 4.4vw, 3.3rem); margin-top: 14px; }
+  .passos { list-style: none; padding: 0; margin: 32px 0 26px; display: grid; gap: 4px; counter-reset: passo; }
+  .passos li { display: grid; grid-template-columns: 54px 1fr; gap: 16px; padding: 16px 0; border-top: 1px solid var(--linha); counter-increment: passo; }
+  .passos li::before { content: counter(passo, decimal-leading-zero); font-family: var(--titulo); font-weight: 700; font-size: 1.9rem; line-height: 1; color: var(--laranja); transform: skewX(-8deg); }
+  .passos strong { display: block; color: var(--branco); font-family: var(--titulo); text-transform: uppercase; font-weight: 600; letter-spacing: .03em; font-size: 1.1rem; }
+  .passos span { color: var(--metal); font-size: .95rem; }
+  .aviso { display: flex; gap: 10px; align-items: flex-start; font-size: .86rem; color: var(--metal); margin-bottom: 28px; padding: 14px 16px; background: var(--preto-2); border-left: 3px solid var(--laranja); }
+  .aviso .ico { color: var(--laranja); margin-top: 2px; }
+  /* Antes e depois: aparece quando houver fotos reais (ver comentário no HTML) */
+  .antes-depois { margin-top: clamp(40px, 6vw, 64px); display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .antes-depois figure { position: relative; }
+  .antes-depois img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .antes-depois figcaption { position: absolute; top: 12px; left: 12px; background: var(--preto); color: var(--branco); font-family: var(--titulo); letter-spacing: .14em; text-transform: uppercase; font-size: .8rem; padding: 4px 12px; }
+  .antes-depois figure:last-child figcaption { background: var(--laranja); color: var(--preto); }
+
+  /* Sobre */
+  .sobre-grade { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(36px, 6vw, 84px); align-items: center; }
+  .sobre-texto p + p { margin-top: 14px; }
+  .sobre-texto .lead { margin-top: 22px; color: var(--texto); }
+  .fatos { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 36px; background: var(--linha); border: 1px solid var(--linha); }
+  .fato { background: var(--preto-2); padding: 20px 22px; }
+  .fato strong { display: block; font-family: var(--titulo); font-weight: 700; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1; color: var(--branco); }
+  .fato strong em { font-style: normal; color: var(--laranja); }
+  .fato span { display: block; font-size: .86rem; color: var(--metal); margin-top: 6px; }
+  .sobre-foto { position: relative; }
+  .sobre-foto img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+  .sobre-foto::after { content: ''; position: absolute; inset: 18px -18px -18px 18px; border: 2px solid var(--laranja); z-index: -1; }
+  .sobre-foto { isolation: isolate; }
+  .sobre-foto figcaption { position: absolute; right: 0; bottom: 0; background: rgba(8,8,8,.85); padding: 10px 16px; font-size: .84rem; color: var(--texto); }
+
+  /* Avaliações */
+  .aval-grade { display: grid; grid-template-columns: 340px 1fr; gap: 24px; align-items: stretch; }
+  .nota-painel { background: var(--laranja); color: var(--preto); padding: 34px 30px; display: flex; flex-direction: column; justify-content: space-between; gap: 26px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%); }
+  .nota-painel .rotulo { color: var(--preto); } .nota-painel .rotulo::before { background: var(--preto); }
+  .nota-num { font-family: var(--titulo); font-weight: 700; font-size: 6rem; line-height: .9; transform: skewX(-7deg); }
+  .nota-painel .estrelas { color: var(--preto); margin-top: 16px; }
+  .nota-painel .estrelas .ico { width: 24px; height: 24px; }
+  .nota-painel p { font-weight: 600; }
+  .nota-painel .btn { background: var(--preto); color: var(--branco); align-self: flex-start; }
+  .nota-painel .btn:hover { background: var(--grafite); }
+  .estrelas { display: flex; gap: 3px; color: #FFB800; }
+  .estrelas .ico { width: 20px; height: 20px; }
+  .depo-lista { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .depo { background: var(--grafite); border: 1px solid var(--linha); padding: 26px; display: flex; flex-direction: column; gap: 14px; transition: border-color .3s; }
+  .depo:hover { border-color: rgba(255,101,0,.4); }
+  .depo blockquote { color: var(--branco); font-size: 1rem; flex: 1; }
+  .depo figcaption { display: flex; align-items: center; gap: 12px; font-weight: 600; color: var(--branco); font-size: .95rem; }
+  .depo figcaption small { display: block; font-weight: 400; color: var(--metal); font-size: .8rem; }
+  .avatar { width: 40px; height: 40px; flex: none; display: grid; place-items: center; background: var(--preto); color: var(--laranja); font-family: var(--titulo); font-weight: 700; font-size: 1.1rem; border: 1.5px solid var(--laranja); transform: skewX(-8deg); }
+  .avatar > span { transform: skewX(8deg); }
+  .depo.largo { grid-column: span 2; }
+
+  /* Galeria */
+  .galeria { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 12px; }
+  .galeria button { position: relative; overflow: hidden; padding: 0; background: var(--grafite); }
+  .galeria button:first-child { grid-column: span 2; grid-row: span 2; }
+  .galeria img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease), filter .4s; filter: brightness(.88); }
+  .galeria button:hover img { transform: scale(1.05); filter: brightness(1); }
+  .galeria button::after { content: attr(data-legenda); position: absolute; left: 0; right: 0; bottom: 0; padding: 30px 16px 12px; text-align: left; font-size: .84rem; font-weight: 600; color: var(--branco); background: linear-gradient(0deg, rgba(8,8,8,.85), transparent); opacity: 0; transform: translateY(8px); transition: opacity .3s, transform .3s; }
+  .galeria button:hover::after, .galeria button:focus-visible::after { opacity: 1; transform: none; }
+  .galeria-nota { margin-top: 18px; font-size: .86rem; color: var(--metal); }
+  .lightbox { border: 0; padding: 0; background: transparent; max-width: min(1100px, 94vw); max-height: 92vh; overflow: visible; }
+  .lightbox::backdrop { background: rgba(0,0,0,.92); }
+  .lightbox img { max-width: 100%; max-height: 82vh; width: auto; margin-inline: auto; }
+  .lightbox p { color: var(--branco); text-align: center; margin-top: 12px; font-size: .92rem; }
+  .lightbox-fechar, .lightbox-nav { position: fixed; display: grid; place-items: center; width: 50px; height: 50px; background: var(--laranja); color: var(--preto); }
+  .lightbox-fechar { top: 16px; right: 16px; }
+  .lightbox-nav { top: 50%; translate: 0 -50%; background: rgba(255,255,255,.12); color: var(--branco); }
+  .lightbox-nav:hover { background: var(--laranja); color: var(--preto); }
+  .lightbox-nav.ant { left: 16px; } .lightbox-nav.prox { right: 16px; }
+  .lightbox .ico { width: 22px; height: 22px; }
+
+  /* Contato */
+  .contato { position: relative; background: var(--preto); overflow: hidden; }
+  .contato-cta { position: relative; background: var(--laranja); color: var(--preto); padding: clamp(36px, 5vw, 60px); display: grid; grid-template-columns: 1.4fr auto; gap: 28px; align-items: center; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 34px), calc(100% - 34px) 100%, 0 100%); overflow: hidden; isolation: isolate; }
+  .contato-cta::after { content: '7'; position: absolute; right: 18%; top: -38%; z-index: -1; font-family: var(--titulo); font-weight: 700; font-size: 22rem; line-height: 1; color: rgba(0,0,0,.08); transform: skewX(-12deg); }
+  .contato-cta h2 { color: var(--preto); font-size: clamp(1.9rem, 4vw, 3.1rem); }
+  .contato-cta p { margin-top: 12px; font-weight: 500; font-size: 1.05rem; max-width: 34em; }
+  .contato-cta .btn { background: var(--preto); color: var(--branco); min-height: 60px; padding-inline: 2em; }
+  .contato-cta .btn:hover { background: var(--grafite); }
+  .contato-cta .btn .ico { color: #25D366; }
+  .contato-grade { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(28px, 4vw, 48px); margin-top: clamp(40px, 6vw, 64px); }
+  .info { display: grid; gap: 22px; align-content: start; }
+  .info-item { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+  .info-ico { width: 44px; height: 44px; display: grid; place-items: center; background: var(--grafite); color: var(--laranja); }
+  .info-ico .ico { width: 20px; height: 20px; }
+  .info h3 { font-size: 1rem; letter-spacing: .08em; color: var(--metal); font-weight: 500; }
+  .info-item p, .info-item a { color: var(--branco); font-size: 1.02rem; }
+  .info-item a:hover { color: var(--laranja); }
+  .horas { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: .95rem; }
+  .horas th, .horas td { text-align: left; padding: 7px 0; border-bottom: 1px solid var(--linha); font-weight: 400; color: var(--texto); }
+  .horas td { text-align: right; }
+  .horas tr.hoje th, .horas tr.hoje td { color: var(--laranja); font-weight: 700; }
+  .status-loja { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-size: .9rem; font-weight: 600; color: var(--branco); }
+  .mapa { position: relative; min-height: 420px; background: var(--grafite); border: 1px solid var(--linha); }
+  .mapa iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.4) contrast(1.05); }
+  .mapa-acoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+
+  /* Footer */
+  .rodape { background: var(--preto); border-top: 1px solid var(--linha); padding-top: clamp(56px, 7vw, 80px); font-size: .92rem; }
+  .rodape-grade { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 36px; padding-bottom: 48px; }
+  .rodape-marca img { height: 84px; width: auto; }
+  .rodape-marca p { margin-top: 18px; color: var(--metal); max-width: 26em; }
+  .rodape h3 { font-size: .92rem; letter-spacing: .16em; color: var(--branco); margin-bottom: 16px; }
+  .rodape ul { list-style: none; padding: 0; display: grid; gap: 9px; }
+  .rodape li a, .rodape li span { color: var(--metal); transition: color .2s; }
+  .rodape li a:hover { color: var(--laranja); }
+  .rodape-base { border-top: 1px solid var(--grafite-2); padding-block: 22px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; color: #7d7d7d; font-size: .82rem; }
+
+  /* WhatsApp flutuante */
+  .wa-flutuante { position: fixed; right: 20px; bottom: 20px; z-index: 40; width: 58px; height: 58px; display: grid; place-items: center; background: #25D366; color: #fff; border-radius: 50%; box-shadow: 0 10px 26px rgba(0,0,0,.45); opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; transition: opacity .3s, transform .3s var(--ease); }
+  .wa-flutuante.visivel { opacity: 1; transform: none; pointer-events: auto; }
+  .wa-flutuante:hover { transform: scale(1.06); }
+  .wa-flutuante .ico { width: 30px; height: 30px; }
+  .wa-flutuante .dica { position: absolute; right: 70px; white-space: nowrap; background: var(--branco); color: var(--preto); font-size: .82rem; font-weight: 600; padding: 7px 12px; opacity: 0; transform: translateX(6px); transition: opacity .2s, transform .2s; pointer-events: none; }
+  .wa-flutuante:hover .dica, .wa-flutuante:focus-visible .dica { opacity: 1; transform: none; }
+
+  /* Animações de entrada (só com JS e sem redução de movimento) */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .revela { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--atraso, 0s); }
+    .js .revela.visto { opacity: 1; transform: none; }
+    .hero-conteudo > * { animation: entra .9s var(--ease) both; }
+    .hero-conteudo > :nth-child(2) { animation-delay: .08s; } .hero-conteudo > :nth-child(3) { animation-delay: .16s; }
+    .hero-conteudo > :nth-child(4) { animation-delay: .24s; } .hero-conteudo > :nth-child(5) { animation-delay: .32s; }
+    .hero-foto img { animation: foto 1.6s var(--ease) both; }
+    .hero-faixas i { animation: faixa 1s var(--ease) .2s both; }
+    @keyframes entra { from { opacity: 0; transform: translateY(18px); } }
+    @keyframes foto { from { opacity: 0; transform: scale(1.05); } }
+    @keyframes faixa { from { transform: skewX(-38deg) translateY(110%); } }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; animation: none !important; }
+  }
+
+  /* ===== Responsivo ===== */
+  @media (max-width: 1080px) {
+    .serv-grade { grid-template-columns: 1fr 1fr; }
+    .aval-grade { grid-template-columns: 1fr; }
+    .nota-painel { flex-direction: row; flex-wrap: wrap; align-items: center; }
+    .rodape-grade { grid-template-columns: 1fr 1fr; }
+    .marcas-linha { grid-template-columns: 1fr; gap: 26px; }
+  }
+  @media (max-width: 920px) {
+    :root { --topo: 68px; }
+    .topo.rolou .envolve { height: 64px; }
+    .marca .cheia { display: none; }
+    .marca .compacta { display: block; height: 36px; }
+    .topo.rolou .marca img.compacta { height: 32px; }
+    .abre-menu { display: grid; }
+    .menu { position: fixed; inset: var(--topo) 0 auto 0; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 20px 26px; background: var(--preto); border-bottom: 2px solid var(--laranja); transform: translateY(-12px); opacity: 0; visibility: hidden; transition: opacity .25s, transform .25s var(--ease), visibility 0s .25s; max-height: calc(100svh - var(--topo)); overflow-y: auto; }
+    .topo.rolou .menu { top: 64px; }
+    .menu.aberto { opacity: 1; transform: none; visibility: visible; transition: opacity .25s, transform .25s var(--ease); }
+    .menu a:not(.btn) { padding: 15px 0; font-size: 1.15rem; border-bottom: 1px solid var(--linha); }
+    .menu a:not(.btn)::after { display: none; }
+    .menu a.ativo { color: var(--laranja); }
+    .menu .btn { margin: 20px 0 0; min-height: 54px; }
+    .hero-foto { height: auto; aspect-ratio: 1448 / 846; }
+    .hero-foto img { object-position: 50% 50%; }
+    .hero-foto::after { background: linear-gradient(0deg, var(--preto) 0%, rgba(8,8,8,0) 30%); }
+    .hero-faixas { width: 130px; height: 120px; }
+    .hero-conteudo { margin-top: -10px; padding-bottom: 48px; }
+    .hero-lado { grid-template-columns: 1fr; }
+    .hero-lado .hero-acoes { margin-top: 10px; }
+    .cabeca { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .prod-grade { grid-template-columns: 1fr 1fr; }
+    .prod-grade .card, .prod-grade .card.largo { grid-column: span 1; }
+    .prod-grade .card.largo .card-foto { aspect-ratio: 16 / 11; }
+    .prod-grade .card:last-child { grid-column: span 2; }
+    .destaque-grade, .sobre-grade, .contato-grade { grid-template-columns: 1fr; }
+    .sobre-foto { order: -1; margin-right: 18px; }
+    .contato-cta { grid-template-columns: 1fr; }
+    .galeria { grid-template-columns: 1fr 1fr; grid-auto-rows: 170px; }
+    .mapa { min-height: 320px; }
+  }
+  @media (max-width: 640px) {
+    .envolve { width: min(1200px, 100% - 32px); }
+    .hero h1 { font-size: clamp(2.35rem, 10.5vw, 3.2rem); }
+    .hero-acoes .btn { width: 100%; }
+    .hero-acoes .btn-contorno { transform: none; } .hero-acoes .btn-contorno span { transform: none; }
+    .hero-meta { gap: 10px 20px; font-size: .86rem; }
+    .prod-grade, .serv-grade, .depo-lista { grid-template-columns: 1fr; }
+    .prod-grade .card:last-child, .depo.largo { grid-column: auto; }
+    .card-corpo { padding: 4px 20px 22px; }
+    .card h3 { font-size: 1.35rem; }
+    .serv-grade .card { flex-direction: row; }
+    .serv-grade .card-foto { width: 36%; flex: none; aspect-ratio: auto; }
+    .serv-grade .card-foto::after { display: none; }
+    .serv-grade .card-corpo { padding: 16px 16px 18px; gap: 4px; }
+    .serv-grade .card h3 { font-size: 1.15rem; }
+    .serv-grade .card p { font-size: .88rem; }
+    .serv-grade .card .link-seta { margin-top: 6px; font-size: .82rem; }
+    .fatos { grid-template-columns: 1fr 1fr; }
+    .fato { padding: 16px; }
+    .nota-num { font-size: 4.6rem; }
+    .galeria { grid-auto-rows: 140px; gap: 8px; }
+    .antes-depois { grid-template-columns: 1fr; }
+    .contato-cta .btn { width: 100%; padding-inline: 1em; font-size: .92rem; }
+    .contato-cta::after { font-size: 14rem; right: -6%; top: -10%; }
+    .rodape-grade { grid-template-columns: 1fr; gap: 30px; }
+    .wa-flutuante { right: 14px; bottom: 14px; width: 54px; height: 54px; }
+    .lightbox-nav { top: auto; bottom: 16px; translate: none; }
+  }
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- Ícones -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></symbol>
+  <symbol id="i-estrela" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></symbol>
+  <symbol id="i-meia" viewBox="0 0 24 24"><defs><linearGradient id="g-meia"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="currentColor" stop-opacity=".28"/></linearGradient></defs><path fill="url(#g-meia)" stroke="none" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9L12 2.8Z"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-local" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-fone" viewBox="0 0 24 24"><path d="M5 4h3.5l1.5 4-2 1.3a10 10 0 0 0 6.7 6.7L16 14l4 1.5V19a1.5 1.5 0 0 1-1.6 1.5A16 16 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4Z"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-pneu" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2.2M12 18.8V21M3 12h2.2M18.8 12H21M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M5.6 18.4l1.6-1.6M16.8 7.2l1.6-1.6"/></symbol>
+  <symbol id="i-carro-moto" viewBox="0 0 24 24"><path d="M3 13l1.6-4.2A2 2 0 0 1 6.5 7.5h6a2 2 0 0 1 1.8 1.1L16 12"/><path d="M2.5 13h12.5v3.5h-12.5z"/><circle cx="5.5" cy="17" r="1.4"/><circle cx="12" cy="17" r="1.4"/><circle cx="19" cy="17" r="2.5"/><path d="M19 17l-2-5h2.5M17 12l-1 0"/></symbol>
+  <symbol id="i-chave" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 6.3-6.3a4 4 0 0 1-1.6-5.4Z"/><path d="M14.7 6.3 17 4"/><path d="M3 21l4-4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 10h8M8 13h5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-esq" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-dir" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.2 6.8h.01"/></symbol>
+</svg>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ===== HEADER ===== -->
+<header class="topo" id="topo">
+  <div class="envolve">
+    <a class="marca" href="#inicio" aria-label="Nascar 7 Rodas e Pneus, voltar ao início">
+      <picture class="cheia"><source srcset="img/logo-nascar7.webp" type="image/webp"><img class="cheia" src="img/logo-nascar7.png" alt="Nascar 7 Rodas e Pneus" width="640" height="337"></picture>
+      <picture><source srcset="img/logo-nascar7-compacta.webp" type="image/webp"><img class="compacta" src="img/logo-nascar7-compacta.png" alt="Nascar 7 Rodas e Pneus" width="420" height="100"></picture>
+    </a>
+    <button class="abre-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span></button>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento.">Solicitar orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+    <div class="hero-foto"><img src="img/hero-fachada.webp" srcset="img/hero-fachada-800.webp 800w, img/hero-fachada.webp 1448w" sizes="100vw" alt="Fachada da Nascar 7 Rodas e Pneus à noite, com a placa iluminada: borracharia, roda, pneus e baterias" width="1448" height="846" fetchpriority="high" decoding="async"></div>
+    <div class="hero-faixas" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="envolve">
+      <div class="hero-conteudo">
+        <div class="hero-titulo">
+        <span class="rotulo">Rodas e pneus · Ibiúna/SP</span>
+        <h1 id="hero-titulo"><span class="linha">Performance e qualidade</span><span class="linha">para seguir <span class="laranja inclina">em frente.</span></span></h1>
+        </div>
+        <div class="hero-lado">
+        <p class="hero-sub">Pneus, rodas e soluções automotivas para quem valoriza segurança, desempenho e qualidade.</p>
+        <div class="hero-acoes">
+          <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Solicitar orçamento</a>
+          <a class="btn btn-contorno" href="#servicos"><span>Conhecer serviços <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span></a>
+        </div>
+        <div class="hero-meta">
+          <span><svg class="ico estrela" aria-hidden="true"><use href="#i-estrela"/></svg><b>4,5</b> no Google · 123 avaliações</span>
+          <span class="status" data-status><span class="status-ponto"></span><span data-status-txt>Seg. a sáb. a partir das 9h</span></span>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUTOS ===== -->
+  <section class="secao" id="produtos" aria-labelledby="produtos-titulo">
+    <div class="envolve">
+      <div class="cabeca">
+        <div class="revela"><span class="rotulo">Produtos</span><h2 class="h2" id="produtos-titulo">Tudo para equipar <span class="laranja inclina">seu veículo.</span></h2></div>
+        <p class="lead revela">Medidas e marcas variam conforme o estoque. Consulte a disponibilidade pelo WhatsApp e receba o orçamento na hora.</p>
+      </div>
+      <div class="prod-grade">
+        <article class="card largo revela">
+          <div class="card-foto"><span class="card-num">01</span><img src="img/pneus-carro.webp" alt="Pneus automotivos empilhados" width="900" height="600" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Pneus automotivos</h3><p>Pneus para carro, com montagem feita na própria loja.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar a disponibilidade de pneus para o meu carro. A medida é: ">Consultar disponibilidade <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card largo revela" style="--atraso:.06s">
+          <div class="card-foto"><span class="card-num">02</span><img src="img/pneus-moto.webp" alt="Mecânico trabalhando em uma motocicleta" width="900" height="600" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Pneus para motocicletas</h3><p>Pneus para moto do dia a dia, trabalho e estrada.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar a disponibilidade de pneus para a minha moto. A medida é: ">Consultar disponibilidade <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card revela">
+          <div class="card-foto"><span class="card-num">03</span><img src="img/rodas.webp" alt="Roda de liga leve sobre pneus empilhados" width="900" height="863" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Rodas esportivas</h3><p>Rodas para deixar o carro do seu jeito.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar rodas. Meu carro é: ">Consultar disponibilidade <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card revela" style="--atraso:.06s">
+          <div class="card-foto"><span class="card-num">04</span><img src="img/camaras.webp" alt="Pneus em estoque" width="900" height="600" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Câmaras de ar</h3><p>Câmaras de ar para moto e outros veículos.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar câmara de ar. A medida é: ">Consultar disponibilidade <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card revela" style="--atraso:.12s">
+          <div class="card-foto"><span class="card-num">05</span><img src="img/loja-acessorios.webp" alt="Produtos e acessórios expostos na loja da Nascar" width="900" height="1080" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Acessórios automotivos</h3><p>Acessórios e produtos para o seu carro, direto da loja.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero consultar acessórios automotivos. Procuro: ">Consultar disponibilidade <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARCAS =====
+       Para adicionar uma marca: copie um <li class="marca-item"> e troque o texto por
+       <img src="img/marcas/NOME.svg" alt="NOME" loading="lazy">.
+       Só incluir marcas que a Nascar confirmar que vende. -->
+  <section class="marcas" aria-labelledby="marcas-titulo">
+    <div class="envolve marcas-linha">
+      <div class="revela"><span class="rotulo">Marcas</span><h2 class="h2" id="marcas-titulo">Trabalhamos com <span class="laranja">grandes marcas.</span></h2></div>
+      <ul class="marcas-lista revela" style="--atraso:.08s">
+        <li class="marca-item"><span class="marca-texto">Maggion<small>Pneus e câmaras</small></span></li>
+        <li class="marca-item marca-consulta"><span>Procurando outra marca?<br><a href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e queria saber quais marcas de pneu vocês têm para a medida: ">Consulte pelo WhatsApp</a></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SERVIÇOS ===== -->
+  <section class="secao secao-alt" id="servicos" aria-labelledby="servicos-titulo">
+    <div class="envolve">
+      <div class="cabeca">
+        <div class="revela"><span class="rotulo">Serviços</span><h2 class="h2" id="servicos-titulo">Cuidado e precisão <span class="laranja inclina">em cada detalhe.</span></h2></div>
+        <p class="lead revela">Do pneu furado à roda trincada: serviço para carro e moto no mesmo lugar. Toque em um serviço para pedir o orçamento.</p>
+      </div>
+      <div class="serv-grade">
+        <article class="card revela">
+          <div class="card-foto"><img src="img/montagem.webp" alt="Profissional com luvas conferindo um pneu" width="900" height="600" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Montagem de pneus</h3><p>Troca e montagem de pneus de carro e moto, feita na hora.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de montagem/troca de pneus.">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card revela" style="--atraso:.06s">
+          <div class="card-foto"><img src="img/balanceamento.webp" alt="Cubo de roda com disco de freio, com a roda fora do carro" width="900" height="601" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Balanceamento</h3><p>Rodas balanceadas para rodar sem vibração no volante.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de balanceamento.">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card revela" style="--atraso:.12s">
+          <div class="card-foto"><img src="img/loja-interior.webp" alt="Pneus em estoque dentro da loja da Nascar" width="480" height="520" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Vulcanização e borracharia</h3><p>Conserto de pneu furado ou cortado, quando o reparo é possível, sem precisar trocar.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de vulcanização/conserto de pneu.">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card revela">
+          <div class="card-foto"><img src="img/motos.webp" alt="Mecânico trabalhando em uma moto" width="900" height="600" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Serviços para motos</h3><p>Pneus, câmaras de ar e manutenção para a sua moto.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de serviço para a minha moto.">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card revela" style="--atraso:.06s">
+          <div class="card-foto"><img src="img/recuperacao.webp" alt="Ferramentas organizadas na bancada" width="900" height="600" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Recuperação de rodas</h3><p>Roda amassada, riscada ou trincada avaliada e reformada.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de recuperação de rodas.">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+        <article class="card revela" style="--atraso:.12s">
+          <div class="card-foto"><img src="img/solda.webp" alt="Mãos de profissional trabalhando com ferramenta" width="900" height="675" loading="lazy" decoding="async"></div>
+          <div class="card-corpo"><h3>Solda em alumínio</h3><p>Reparo de trincas em rodas de liga leve, depois de avaliar a peça.</p>
+            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de solda em alumínio na roda.">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESTAQUE: RECUPERAÇÃO DE RODAS ===== -->
+  <section class="secao destaque" id="rodas" aria-labelledby="rodas-titulo">
+    <div class="envolve">
+      <div class="destaque-grade">
+        <figure class="destaque-foto revela"><img src="img/roda-detalhe.webp" alt="Detalhe dos raios de uma roda de liga leve" width="900" height="900" loading="lazy" decoding="async"><figcaption>Recuperação de rodas</figcaption></figure>
+        <div class="revela" style="--atraso:.08s">
+          <span class="rotulo">Rodas</span>
+          <h2 id="rodas-titulo">Recupere suas rodas. <span class="laranja">Renove o visual do seu veículo.</span></h2>
+          <ol class="passos">
+            <li><div><strong>Avaliação</strong><span>Mande uma foto da roda pelo WhatsApp ou passe na loja.</span></div></li>
+            <li><div><strong>Orçamento</strong><span>A equipe confere o estado da peça e diz se dá para recuperar e quanto fica.</span></div></li>
+            <li><div><strong>Serviço</strong><span>Reforma da roda ou solda em alumínio, conforme o caso.</span></div></li>
+          </ol>
+          <p class="aviso"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span>Toda roda passa por avaliação técnica antes. O resultado depende do estado da peça.</span></p>
+          <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar uma avaliação para recuperar minha roda. Vou mandar uma foto.">Solicitar avaliação <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </div>
+      </div>
+      <!-- ANTES E DEPOIS (aguardando fotos reais da Nascar). Para ativar, salve as fotos em img/ e descomente:
+      <div class="antes-depois revela">
+        <figure><img src="img/roda-antes-1.webp" alt="Roda antes da recuperação" loading="lazy"><figcaption>Antes</figcaption></figure>
+        <figure><img src="img/roda-depois-1.webp" alt="A mesma roda depois da recuperação" loading="lazy"><figcaption>Depois</figcaption></figure>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="secao secao-alt" id="sobre" aria-labelledby="sobre-titulo">
+    <div class="envolve sobre-grade">
+      <div class="sobre-texto revela">
+        <span class="rotulo">Sobre a Nascar</span>
+        <h2 class="h2" id="sobre-titulo">Mais que produtos. <span class="laranja">Compromisso com seu veículo.</span></h2>
+        <p class="lead">A Nascar 7 Rodas e Pneus atende Ibiúna desde 2018, na Av. Antônio Falci, no Centro.</p>
+        <p>Pneus, rodas, câmaras de ar e acessórios ficam na loja, e os serviços de carro e moto são feitos ali mesmo. Atendimento de segunda a sábado, com orçamento também pelo WhatsApp.</p>
+        <div class="fatos">
+          <div class="fato"><strong><em>20</em>18</strong><span>Atendendo em Ibiúna</span></div>
+          <div class="fato"><strong>4,5<em>★</em></strong><span>Nota no Google</span></div>
+          <div class="fato"><strong>123</strong><span>Avaliações de clientes</span></div>
+          <div class="fato"><strong>Seg<em>–</em>Sáb</strong><span>Aberto também aos sábados</span></div>
+        </div>
+      </div>
+      <figure class="sobre-foto revela" style="--atraso:.08s"><img src="img/loja-fachada.webp" alt="Fachada da Nascar Pneus em Ibiúna, com pneus em estoque e a porta laranja com o número 7" width="1400" height="1050" loading="lazy" decoding="async"><figcaption>A loja da Nascar, na Av. Antônio Falci</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ===== AVALIAÇÕES (dados reais do Google) ===== -->
+  <section class="secao" id="avaliacoes" aria-labelledby="aval-titulo">
+    <div class="envolve">
+      <div class="cabeca">
+        <div class="revela"><span class="rotulo">Avaliações</span><h2 class="h2" id="aval-titulo">Quem já passou <span class="laranja inclina">pela Nascar.</span></h2></div>
+        <p class="lead revela">Avaliações reais de clientes no Google.</p>
+      </div>
+      <div class="aval-grade">
+        <div class="nota-painel revela">
+          <div>
+            <span class="rotulo">Google</span>
+            <div class="nota-num" aria-label="Nota 4,5 de 5">4,5</div>
+            <div class="estrelas" aria-hidden="true"><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-meia"/></svg></div>
+          </div>
+          <p>Média de 123 avaliações de clientes no Google.</p>
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Nascar%20Pneus&amp;query_place_id=ChIJ49O8iaN2z5QR4P9HhAGjmFs" target="_blank" rel="noopener">Ver no Google <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a>
+        </div>
+        <div class="depo-lista">
+          <figure class="depo revela"><div class="estrelas" aria-label="5 estrelas"><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg></div>
+            <blockquote>Precisei dos serviços num sábado às 17h e fui muito bem atendida pelo Sr. Isaias, muito solícito, trabalho impecável e muito ágil. Muito obrigada!</blockquote>
+            <figcaption><span class="avatar"><span>C</span></span><span>Caroline F.<small>Avaliação no Google</small></span></figcaption></figure>
+          <figure class="depo revela" style="--atraso:.06s"><div class="estrelas" aria-label="5 estrelas"><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg></div>
+            <blockquote>Rapidez no atendimento, pessoal muito receptivo e trabalho de excelência. Recomendo.</blockquote>
+            <figcaption><span class="avatar"><span>M</span></span><span>Marcel R.<small>Avaliação no Google</small></span></figcaption></figure>
+          <figure class="depo revela"><div class="estrelas" aria-label="5 estrelas"><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg></div>
+            <blockquote>Ótimo atendimento, parabéns Alessandro, esposa e funcionários. Continuem assim, com amor no que fazem, isso faz a diferença.</blockquote>
+            <figcaption><span class="avatar"><span>M</span></span><span>Marcelo B.<small>Avaliação no Google</small></span></figcaption></figure>
+          <figure class="depo revela" style="--atraso:.06s"><div class="estrelas" aria-label="5 estrelas"><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg></div>
+            <blockquote>Muito atenciosos e preço justo.</blockquote>
+            <figcaption><span class="avatar"><span>L</span></span><span>Leonardo Z.<small>Avaliação no Google</small></span></figcaption></figure>
+          <figure class="depo largo revela"><div class="estrelas" aria-label="5 estrelas"><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg><svg class="ico"><use href="#i-estrela"/></svg></div>
+            <blockquote>Fui super bem atendida, atendimento nota 1000.</blockquote>
+            <figcaption><span class="avatar"><span>D</span></span><span>Dilma S.<small>Avaliação no Google</small></span></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA (fotos reais da loja) =====
+       Para adicionar fotos: salve em img/ (WebP, ~1400px) e copie um <button> com data-src, data-legenda e a <img>. -->
+  <section class="secao secao-alt" id="galeria" aria-labelledby="galeria-titulo">
+    <div class="envolve">
+      <div class="cabeca">
+        <div class="revela"><span class="rotulo">Galeria</span><h2 class="h2" id="galeria-titulo">Conheça <span class="laranja inclina">a loja.</span></h2></div>
+        <p class="lead revela">Toque em uma foto para ampliar.</p>
+      </div>
+      <div class="galeria revela">
+        <button type="button" data-src="img/loja-fachada-noite.webp" data-legenda="A loja à noite, com a placa iluminada"><img src="img/loja-fachada-noite.webp" alt="Fachada da Nascar à noite, com a placa iluminada" width="1360" height="1020" loading="lazy" decoding="async"></button>
+        <button type="button" data-src="img/loja-fachada.webp" data-legenda="Fachada da loja, na Av. Antônio Falci"><img src="img/loja-fachada.webp" alt="Fachada da loja, na Av. Antônio Falci" width="1400" height="1050" loading="lazy" decoding="async"></button>
+        <button type="button" data-src="img/loja-interior.webp" data-legenda="Pneus e produtos na loja"><img src="img/loja-interior.webp" alt="Pneus e produtos na loja" width="480" height="520" loading="lazy" decoding="async"></button>
+        <button type="button" data-src="img/loja-porta-7.webp" data-legenda="A porta com o 7 da Nascar"><img src="img/loja-porta-7.webp" alt="A porta laranja com o número 7 da Nascar" width="320" height="660" loading="lazy" decoding="async"></button>
+        <button type="button" data-src="img/loja-expositor.webp" data-legenda="Expositor de pneus para moto"><img src="img/loja-expositor.webp" alt="Expositor de pneus para moto na entrada" width="300" height="560" loading="lazy" decoding="async"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="secao contato" id="contato" aria-labelledby="contato-titulo">
+    <div class="envolve">
+      <div class="contato-cta revela">
+        <div>
+          <h2 id="contato-titulo">Precisa de pneus ou serviços automotivos?</h2>
+          <p>Entre em contato com nossa equipe e encontre a solução ideal para seu veículo.</p>
+        </div>
+        <a class="btn" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero falar com a Nascar."><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>Falar com a Nascar pelo WhatsApp</a>
+      </div>
+
+      <div class="contato-grade">
+        <div class="info revela">
+          <div class="info-item"><span class="info-ico"><svg class="ico" aria-hidden="true"><use href="#i-local"/></svg></span><div><h3>Endereço</h3><p>Av. Antônio Falci, 1200<br>Centro, Ibiúna/SP · 18150-000</p></div></div>
+          <div class="info-item"><span class="info-ico"><svg class="ico" aria-hidden="true"><use href="#i-fone"/></svg></span><div><h3>Telefone e WhatsApp</h3><a href="tel:+5515996040822">(15) 99604-0822</a></div></div>
+          <div class="info-item"><span class="info-ico"><svg class="ico" aria-hidden="true"><use href="#i-relogio"/></svg></span><div><h3>Horários</h3>
+            <table class="horas" aria-label="Horário de funcionamento"><tbody>
+              <tr data-dia="1"><th scope="row">Segunda</th><td>9h às 19h</td></tr>
+              <tr data-dia="2"><th scope="row">Terça</th><td>9h às 19h</td></tr>
+              <tr data-dia="3"><th scope="row">Quarta</th><td>9h às 19h</td></tr>
+              <tr data-dia="4"><th scope="row">Quinta</th><td>9h às 19h</td></tr>
+              <tr data-dia="5"><th scope="row">Sexta</th><td>9h às 19h</td></tr>
+              <tr data-dia="6"><th scope="row">Sábado</th><td>9h às 18h</td></tr>
+              <tr data-dia="0"><th scope="row">Domingo</th><td>Fechado</td></tr>
+            </tbody></table>
+            <span class="status-loja" data-status aria-live="polite"><span class="status-ponto"></span><span data-status-txt>Horário de atendimento</span></span>
+          </div></div>
+          <!-- INSTAGRAM (aguardando o @ oficial da Nascar). Para ativar, descomente e troque o endereço:
+          <div class="info-item"><span class="info-ico"><svg class="ico" aria-hidden="true"><use href="#i-insta"/></svg></span><div><h3>Instagram</h3><a href="https://instagram.com/USUARIO" target="_blank" rel="noopener">@USUARIO</a></div></div>
+          -->
+        </div>
+        <div class="revela" style="--atraso:.08s">
+          <div class="mapa"><iframe title="Mapa: Nascar 7 Rodas e Pneus em Ibiúna" src="https://maps.google.com/maps?q=Nascar%20Pneus%2C%20Av.%20Ant%C3%B4nio%20Falci%2C%201200%2C%20Ibi%C3%BAna%20SP&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div class="mapa-acoes">
+            <a class="link-seta" href="https://www.google.com/maps/dir/?api=1&amp;destination=Nascar%20Pneus&amp;destination_place_id=ChIJ49O8iaN2z5QR4P9HhAGjmFs" target="_blank" rel="noopener">Como chegar <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="rodape">
+  <div class="envolve">
+    <div class="rodape-grade">
+      <div class="rodape-marca">
+        <picture><source srcset="img/logo-nascar7.webp" type="image/webp"><img src="img/logo-nascar7.png" alt="Nascar 7 Rodas e Pneus" width="640" height="337" loading="lazy"></picture>
+        <p>Pneus, rodas, acessórios e serviços para carros e motos no Centro de Ibiúna/SP.</p>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        <ul><li><a href="#inicio">Início</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#avaliacoes">Avaliações</a></li><li><a href="#contato">Contato</a></li></ul>
+      </div>
+      <div>
+        <h3>Produtos e serviços</h3>
+        <ul><li><a href="#produtos">Pneus para carro e moto</a></li><li><a href="#produtos">Rodas e câmaras de ar</a></li><li><a href="#servicos">Montagem e balanceamento</a></li><li><a href="#servicos">Vulcanização</a></li><li><a href="#rodas">Recuperação de rodas</a></li><li><a href="#servicos">Solda em alumínio</a></li></ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul>
+          <li><span>Av. Antônio Falci, 1200<br>Centro, Ibiúna/SP</span></li>
+          <li><a href="tel:+5515996040822">(15) 99604-0822</a></li>
+          <li><a href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento.">WhatsApp</a></li>
+          <li><span>Seg. a sex. 9h–19h · Sáb. 9h–18h</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>© <span data-ano>2026</span> Nascar 7 Rodas e Pneus. Todos os direitos reservados.</span>
+      <span>Prévia feita por Pablo.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-flutuante" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero solicitar um orçamento." aria-label="Falar com a Nascar pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg><span class="dica" aria-hidden="true">Fale com a Nascar</span></a>
+
+<dialog class="lightbox" aria-label="Foto ampliada">
+  <img src="" alt="">
+  <p></p>
+  <button class="lightbox-fechar" type="button" aria-label="Fechar"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
+  <button class="lightbox-nav ant" type="button" aria-label="Foto anterior"><svg class="ico" aria-hidden="true"><use href="#i-esq"/></svg></button>
+  <button class="lightbox-nav prox" type="button" aria-label="Próxima foto"><svg class="ico" aria-hidden="true"><use href="#i-dir"/></svg></button>
+</dialog>
+
+<script>
+(function () {
+  var WHATS = '5515996040822';
+
+  // WhatsApp: cada botão leva uma mensagem própria (produto/serviço)
+  document.querySelectorAll('[data-wa]').forEach(function (a) {
+    a.href = 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent(a.getAttribute('data-wa'));
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+
+  // Ano no rodapé
+  var ano = document.querySelector('[data-ano]'); if (ano) ano.textContent = new Date().getFullYear();
+
+  // Header: sombra ao rolar + menu mobile
+  var topo = document.getElementById('topo'), botao = document.querySelector('.abre-menu'), menu = document.getElementById('menu');
+  var wa = document.querySelector('.wa-flutuante'), hero = document.getElementById('inicio');
+  function aoRolar() {
+    var y = window.scrollY;
+    topo.classList.toggle('rolou', y > 20);
+    wa.classList.toggle('visivel', y > hero.offsetHeight * 0.6);
+  }
+  window.addEventListener('scroll', aoRolar, { passive: true }); aoRolar();
+  window.addEventListener('beforeprint', function () { document.querySelectorAll('.revela').forEach(function (el) { el.classList.add('visto'); }); });
+  function fecharMenu() { menu.classList.remove('aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
+  botao.addEventListener('click', function () {
+    var abrir = !menu.classList.contains('aberto');
+    menu.classList.toggle('aberto', abrir);
+    botao.setAttribute('aria-expanded', String(abrir)); botao.setAttribute('aria-label', abrir ? 'Fechar menu' : 'Abrir menu');
+  });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) fecharMenu(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fecharMenu(); });
+  document.addEventListener('click', function (e) { if (menu.classList.contains('aberto') && !topo.contains(e.target)) fecharMenu(); });
+
+  // Link ativo no menu conforme a seção visível
+  var links = Array.prototype.slice.call(menu.querySelectorAll('a[href^="#"]'));
+  var mapa = { avaliacoes: 'sobre', galeria: 'sobre', rodas: 'servicos' };
+  if ('IntersectionObserver' in window) {
+    var obsSecao = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var id = mapa[en.target.id] || en.target.id;
+        links.forEach(function (l) { l.classList.toggle('ativo', l.getAttribute('href') === '#' + id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { obsSecao.observe(s); });
+
+    // Entrada suave dos elementos
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visto'); obs.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    document.querySelectorAll('.revela').forEach(function (el) { obs.observe(el); });
+  } else {
+    document.querySelectorAll('.revela').forEach(function (el) { el.classList.add('visto'); });
+  }
+
+  // Aberto agora (horário de Brasília)
+  var H = { 0: [], 1: [[9, 19]], 2: [[9, 19]], 3: [[9, 19]], 4: [[9, 19]], 5: [[9, 19]], 6: [[9, 18]] };
+  var agora = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
+  var d = agora.getDay(), h = agora.getHours() + agora.getMinutes() / 60, txt = '', aberto = false;
+  var linha = document.querySelector('.horas tr[data-dia="' + d + '"]'); if (linha) linha.classList.add('hoje');
+  var hoje = H[d][0];
+  if (hoje && h >= hoje[0] && h < hoje[1]) { aberto = true; txt = 'Aberto agora · fecha às ' + hoje[1] + 'h'; }
+  else if (hoje && h < hoje[0]) { txt = 'Fechado · abre hoje às ' + hoje[0] + 'h'; }
+  else {
+    var nomes = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+    for (var k = 1; k <= 7; k++) { var dd = (d + k) % 7; if (H[dd].length) { txt = 'Fechado · abre ' + (k === 1 ? 'amanhã' : nomes[dd]) + ' às ' + H[dd][0][0] + 'h'; break; } }
+  }
+  document.querySelectorAll('[data-status]').forEach(function (el) {
+    if (aberto) el.setAttribute('data-aberto', 'sim');
+    el.querySelector('[data-status-txt]').textContent = txt;
+  });
+
+  // Galeria com ampliação
+  var dlg = document.querySelector('.lightbox');
+  var itens = Array.prototype.slice.call(document.querySelectorAll('.galeria button'));
+  if (dlg && dlg.showModal && itens.length) {
+    var img = dlg.querySelector('img'), leg = dlg.querySelector('p'), atual = 0;
+    function mostrar(i) {
+      atual = (i + itens.length) % itens.length;
+      var b = itens[atual];
+      img.src = b.getAttribute('data-src'); img.alt = b.querySelector('img').alt; leg.textContent = b.getAttribute('data-legenda');
+    }
+    itens.forEach(function (b, i) { b.addEventListener('click', function () { mostrar(i); dlg.showModal(); }); });
+    dlg.querySelector('.lightbox-fechar').addEventListener('click', function () { dlg.close(); });
+    dlg.querySelector('.ant').addEventListener('click', function () { mostrar(atual - 1); });
+    dlg.querySelector('.prox').addEventListener('click', function () { mostrar(atual + 1); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('keydown', function (e) { if (e.key === 'ArrowLeft') mostrar(atual - 1); if (e.key === 'ArrowRight') mostrar(atual + 1); });
+  }
+})();
+</script>
+</body>
+</html>
