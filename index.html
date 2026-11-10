@@ -56,8 +56,8 @@
   "areaServed": { "@type": "City", "name": "Ibiúna" },
   "hasMap": "https://www.google.com/maps/search/?api=1&query=Nascar%20Pneus&query_place_id=ChIJ49O8iaN2z5QR4P9HhAGjmFs",
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" }
+ { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+ { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "18:00" }
   ],
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "123", "bestRating": "5" }
 }
@@ -157,7 +157,7 @@
   /* ===== Seções ===== */
   .secao { padding-block: clamp(80px, 11vw, 140px); position: relative; }
 
-  /* Cards: três formatos (capa, deitado e em pé) em grade de 12 colunas */
+  /* Cards de produto: capa e em pé, em grade de 12 colunas */
   .card { position: relative; display: flex; flex-direction: column; background: var(--grafite); overflow: hidden; }
   .card-foto { position: relative; overflow: hidden; aspect-ratio: 16 / 11; background: var(--preto-2); }
   .card-foto img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9) brightness(.88); transition: filter .4s; }
@@ -172,22 +172,32 @@
   .card.capa .card-corpo { position: relative; flex: none; padding: clamp(24px, 3vw, 36px); max-width: 32em; }
   .card.capa h3 { font-size: clamp(2.2rem, 3.8vw, 3.3rem); }
   .card.capa p { color: rgba(255,255,255,.8); flex: none; font-size: 1.02rem; }
-  .card.deitado { flex-direction: row; }
-  .card.deitado .card-foto { width: 42%; flex: none; aspect-ratio: auto; min-height: 210px; }
-  .card.deitado .card-corpo { padding: 24px 26px; justify-content: center; }
-  .card.deitado p { flex: none; }
 
-  .prod-grade, .serv-grade { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+  .prod-grade { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
   .prod-grade > :nth-child(1) { grid-column: span 8; }
   .prod-grade > :nth-child(2) { grid-column: span 4; }
   .prod-grade > :nth-child(3) { grid-column: span 4; }
   .prod-grade > :nth-child(4) { grid-column: span 3; }
   .prod-grade > :nth-child(5) { grid-column: span 5; }
-  .serv-grade > :nth-child(1) { grid-column: 1 / span 7; grid-row: span 2; }
-  .serv-grade > :nth-child(2), .serv-grade > :nth-child(3) { grid-column: span 5; }
-  .serv-grade > :nth-child(4) { grid-column: span 6; }
-  .serv-grade > :nth-child(5), .serv-grade > :nth-child(6) { grid-column: span 3; }
 
+
+  /* Serviços: cards de categoria (foto inteira, degradê e texto por cima) */
+  .serv-cat { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  .cat { position: relative; display: grid; overflow: hidden; border-radius: 16px; background: var(--grafite); isolation: isolate; }
+  .cat > * { grid-area: 1 / 1; }
+  .cat-foto { aspect-ratio: 3 / 2; overflow: hidden; }
+  .cat-foto img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+  .cat:hover .cat-foto img { transform: scale(1.05); }
+  .cat-foto::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.9) 0%, rgba(0,0,0,.4) 50%, rgba(0,0,0,0) 100%); pointer-events: none; }
+  .cat-corpo { position: relative; z-index: 1; align-self: end; padding: 16px; }
+  .cat h3 { font-size: clamp(1.4rem, 2vw, 1.75rem); line-height: 1; color: var(--branco); }
+  .cat p { margin-top: 6px; font-size: .9rem; line-height: 1.5; color: rgba(255,255,255,.8); }
+  .cat-acao { margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 600; color: rgba(255,255,255,.9); }
+  .cat-acao .ico { width: 16px; height: 16px; transition: transform .2s ease; }
+  .cat:hover .cat-acao .ico { transform: translateX(4px); }
+  @media (min-width: 640px) { .serv-cat { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 768px) { .cat-foto { aspect-ratio: 1 / 1; } .cat-corpo { padding: 24px; } }
+  @media (min-width: 1024px) { .serv-cat { grid-template-columns: repeat(3, 1fr); } }
 
   /* Marcas: faixa laranja */
   .marcas { background: var(--laranja); color: var(--preto); padding-block: clamp(64px, 8vw, 100px); --tinta: var(--preto); --texto: var(--preto); --link: var(--preto); --foco: var(--preto); }
@@ -196,10 +206,11 @@
   .marcas-grupos { display: grid; gap: 26px; }
   .marcas-grupos h3 { font-family: var(--corpo); text-transform: none; font-size: 1rem; font-weight: 700; line-height: 1.3; margin-bottom: 10px; }
   .marcas-lista { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; list-style: none; padding: 0; }
-  .marca-item { min-height: 88px; display: grid; place-items: center start; background: var(--preto); padding: 16px 18px; }
-  .marca-item img { max-height: 40px; width: auto; }
-  .marca-texto { font-family: var(--titulo); font-weight: 700; font-style: italic; font-size: clamp(1.15rem, 1.5vw, 1.4rem); line-height: 1; color: var(--branco); text-transform: uppercase; }
-  .marca-consulta { grid-column: span 3; background: transparent; box-shadow: inset 0 0 0 2px var(--preto); color: var(--preto); font-weight: 500; }
+  .marca-item { min-height: 88px; display: grid; place-items: center; background: var(--branco); padding: 16px 18px; }
+  .marca-item img { width: auto; max-width: 100%; max-height: 36px; }
+  .marca-item img.alto { max-height: 56px; }
+  .marca-texto { font-family: var(--titulo); font-weight: 700; font-style: italic; font-size: clamp(1.15rem, 1.5vw, 1.4rem); line-height: 1; color: var(--preto); text-transform: uppercase; }
+  .marca-consulta { grid-column: span 3; place-items: center start; background: transparent; box-shadow: inset 0 0 0 2px var(--preto); color: var(--preto); font-weight: 500; }
   .marca-consulta a { color: var(--preto); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 
   /* Destaque recuperação de rodas */
@@ -334,10 +345,11 @@
   /* Animação só nas imagens: corte diagonal que abre a foto, com leve zoom saindo.
      O estado escondido só existe com JS e sem pedido de redução de movimento. */
   @media (prefers-reduced-motion: no-preference) {
-    .js :is(.card-foto, .destaque-foto, .sobre-foto, .galeria button) { clip-path: polygon(-10% -10%, -10% -10%, -26% 110%, -10% 110%); transition: clip-path 1.15s var(--ease) var(--atraso, 0s); }
-    .js :is(.card-foto, .destaque-foto, .sobre-foto, .galeria button).visto { clip-path: polygon(-10% -10%, 126% -10%, 110% 110%, -10% 110%); }
-    .js :is(.card-foto, .sobre-foto, .galeria button) img { transform: scale(1.1); transition: transform 1.6s var(--ease) var(--atraso, 0s), filter .4s; }
-    .js :is(.card-foto, .sobre-foto, .galeria button).visto img { transform: none; }
+    .js :is(.card-foto, .cat-foto, .destaque-foto, .sobre-foto, .galeria button) { clip-path: polygon(-10% -10%, -10% -10%, -26% 110%, -10% 110%); transition: clip-path 1.15s var(--ease) var(--atraso, 0s); }
+    .js :is(.card-foto, .cat-foto, .destaque-foto, .sobre-foto, .galeria button).visto { clip-path: polygon(-10% -10%, 126% -10%, 110% 110%, -10% 110%); }
+    .js :is(.card-foto, .cat-foto, .sobre-foto, .galeria button) img { transform: scale(1.1); transition: transform 1.6s var(--ease) var(--atraso, 0s), filter .4s; }
+    .js :is(.card-foto, .cat-foto, .sobre-foto, .galeria button).visto img { transform: none; }
+    .js .cat:hover .cat-foto.visto img { transform: scale(1.05); transition: transform .5s ease; }
     .hero-foto img { animation: abre 1.3s var(--ease) both; }
     .hero-faixas i { animation: faixa .9s var(--ease) .35s both; }
     .hero-faixas i:nth-child(2) { animation-delay: .45s; }
@@ -355,14 +367,6 @@
     .nota-painel { flex-direction: row; flex-wrap: wrap; align-items: center; }
     .rodape-grade { grid-template-columns: 1fr 1fr; }
     .marcas-linha { grid-template-columns: 1fr; }
-    .serv-grade > :nth-child(1) { grid-column: 1 / -1; grid-row: auto; }
-    .serv-grade > :nth-child(2), .serv-grade > :nth-child(3) { grid-column: span 6; }
-    .serv-grade > :nth-child(4) { grid-column: 1 / -1; }
-    .serv-grade > :nth-child(5), .serv-grade > :nth-child(6) { grid-column: span 6; }
-  }
-  @media (min-width: 641px) and (max-width: 1080px) {
-    .serv-grade .card.deitado:not(:nth-child(4)) { flex-direction: column; }
-    .serv-grade .card.deitado:not(:nth-child(4)) .card-foto { width: auto; aspect-ratio: 16 / 10; min-height: 0; }
   }
   @media (max-width: 920px) {
     :root { --topo: 68px; }
@@ -386,9 +390,9 @@
     .hero-texto { max-width: none; padding-block: 20px 56px; }
     .hero h1 { font-size: clamp(2.6rem, 9vw, 4rem); }
     .cabeca { grid-template-columns: 1fr; gap: 16px; }
-    .prod-grade, .serv-grade { grid-template-columns: 1fr 1fr; }
-    .prod-grade > :nth-child(n), .serv-grade > :nth-child(n) { grid-column: auto; grid-row: auto; }
-    .prod-grade > :nth-child(1), .serv-grade > :nth-child(1), .serv-grade > :nth-child(4) { grid-column: 1 / -1; }
+    .prod-grade { grid-template-columns: 1fr 1fr; }
+    .prod-grade > :nth-child(n) { grid-column: auto; grid-row: auto; }
+    .prod-grade > :nth-child(1) { grid-column: 1 / -1; }
     .card.capa { min-height: 400px; }
     .destaque-grade, .sobre-grade, .contato-grade { grid-template-columns: 1fr; }
     .sobre-foto { order: -1; }
@@ -401,15 +405,10 @@
     .hero-acoes .btn { width: 100%; }
     .hero-acoes .btn-contorno { transform: none; } .hero-acoes .btn-contorno span { transform: none; }
     .hero-meta { gap: 10px 20px; font-size: .88rem; }
-    .prod-grade, .serv-grade { grid-template-columns: 1fr; }
-    .prod-grade > :nth-child(n), .serv-grade > :nth-child(n) { grid-column: 1 / -1; }
+    .prod-grade { grid-template-columns: 1fr; }
+    .prod-grade > :nth-child(n) { grid-column: 1 / -1; }
     .card.capa { min-height: 340px; }
     .card-corpo { padding: 18px 20px 22px; }
-    .serv-grade .card:not(.capa) { flex-direction: row; }
-    .serv-grade .card:not(.capa) .card-foto { width: 36%; aspect-ratio: auto; min-height: 0; }
-    .serv-grade .card:not(.capa) .card-corpo { padding: 16px 16px 18px; gap: 4px; }
-    .serv-grade .card:not(.capa) h3 { font-size: 1.3rem; }
-    .serv-grade .card:not(.capa) p { font-size: .9rem; }
     .marcas-lista { grid-template-columns: 1fr 1fr; }
     .marca-consulta, .marca-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .marca-texto { font-size: 1.3rem; }
@@ -443,6 +442,7 @@
   <symbol id="i-carro-moto" viewBox="0 0 24 24"><path d="M3 13l1.6-4.2A2 2 0 0 1 6.5 7.5h6a2 2 0 0 1 1.8 1.1L16 12"/><path d="M2.5 13h12.5v3.5h-12.5z"/><circle cx="5.5" cy="17" r="1.4"/><circle cx="12" cy="17" r="1.4"/><circle cx="19" cy="17" r="2.5"/><path d="M19 17l-2-5h2.5M17 12l-1 0"/></symbol>
   <symbol id="i-chave" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 6.3-6.3a4 4 0 0 1-1.6-5.4Z"/><path d="M14.7 6.3 17 4"/><path d="M3 21l4-4"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 10h8M8 13h5"/></symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
   <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
   <symbol id="i-esq" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
@@ -542,18 +542,18 @@
         <div>
           <h3>Pneus</h3>
           <ul class="marcas-lista">
-            <li class="marca-item"><span class="marca-texto">Pirelli</span></li>
-            <li class="marca-item"><span class="marca-texto">Goodyear</span></li>
-            <li class="marca-item"><span class="marca-texto">Bridgestone</span></li>
-            <li class="marca-item"><span class="marca-texto">Firestone</span></li>
-            <li class="marca-item"><span class="marca-texto">Longway</span></li>
+            <li class="marca-item"><img src="img/marcas/pirelli.svg" alt="Pirelli" width="800" height="209" loading="lazy"></li>
+            <li class="marca-item"><img src="img/marcas/goodyear.webp" alt="Goodyear" width="502" height="120" loading="lazy"></li>
+            <li class="marca-item"><img src="img/marcas/bridgestone.svg" alt="Bridgestone" width="1000" height="123" loading="lazy"></li>
+            <li class="marca-item"><img src="img/marcas/firestone.webp" alt="Firestone" width="537" height="97" loading="lazy"></li>
+            <li class="marca-item"><img src="img/marcas/longway.webp" alt="Longway Pneus" width="194" height="46" loading="lazy"></li>
           </ul>
         </div>
         <div>
           <h3>Baterias</h3>
           <ul class="marcas-lista">
-            <li class="marca-item"><span class="marca-texto">Moura</span></li>
-            <li class="marca-item"><span class="marca-texto">Lider</span></li>
+            <li class="marca-item"><img src="img/marcas/moura.svg" alt="Moura" width="500" height="139" loading="lazy"></li>
+            <li class="marca-item"><img class="alto" src="img/marcas/lider.webp" alt="Lider Baterias" width="197" height="160" loading="lazy"></li>
             <li class="marca-item marca-consulta"><span>Procurando outra marca?<br><a href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e queria saber se vocês têm pneu ou bateria da marca: ">Perguntar pelo WhatsApp</a></span></li>
           </ul>
         </div>
@@ -568,37 +568,55 @@
         <div><h2 class="h2" id="servicos-titulo">Carro ou moto, a gente resolve no mesmo lugar.</h2></div>
         <p class="lead">Do pneu furado à roda trincada. Escolhe o serviço e manda mensagem que a gente te passa o orçamento.</p>
       </div>
-      <div class="serv-grade">
-        <article class="card capa">
-          <div class="card-foto"><img src="img/montagem.webp" alt="Profissional com luvas conferindo um pneu" width="900" height="600" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Montagem de pneus</h3><p>Comprou o pneu? A gente monta na hora.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de montagem/troca de pneus.">Pedir orçamento</a></div>
-        </article>
-        <article class="card deitado" style="--atraso:.06s">
-          <div class="card-foto"><img src="img/servico-balanceamento.webp" alt="Profissional encaixando uma roda de carro na máquina de balanceamento" width="469" height="426" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Balanceamento</h3><p>Chega de volante tremendo. Roda balanceada, viagem tranquila.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de balanceamento.">Pedir orçamento</a></div>
-        </article>
-        <article class="card deitado" style="--atraso:.12s">
-          <div class="card-foto"><img src="img/servico-vulcanizacao.webp" alt="Mãos colocando reparo em um pneu furado" width="900" height="900" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Vulcanização e borracharia</h3><p>Furou ou cortou? Se der pra consertar, a gente conserta e você não gasta com pneu novo.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de vulcanização/conserto de pneu.">Pedir orçamento</a></div>
-        </article>
-        <article class="card deitado">
-          <div class="card-foto"><img src="img/servico-motos.webp" alt="Mecânico de luvas trabalhando na roda dianteira de uma moto" width="736" height="1277" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Serviços para motos</h3><p>Pneu, câmara e manutenção pra sua moto, no mesmo lugar onde você cuida do carro.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de serviço para a minha moto.">Pedir orçamento</a></div>
-        </article>
-        <article class="card" style="--atraso:.06s">
-          <div class="card-foto"><img src="img/servico-recuperacao.webp" alt="Profissional de luvas lixando a borda de uma roda de liga leve" width="900" height="1350" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Recuperação de rodas</h3><p>Roda amassada, riscada ou trincada? A gente avalia e, se tiver jeito, deixa ela inteira de novo.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de recuperação de rodas.">Pedir orçamento</a></div>
-        </article>
-        <article class="card" style="--atraso:.12s">
-          <div class="card-foto"><img src="img/servico-solda.webp" alt="Faíscas de solda sobre uma roda de alumínio" width="236" height="354" loading="lazy" decoding="async"></div>
-          <div class="card-corpo"><h3>Solda em alumínio</h3><p>Trinca em roda de liga leve muitas vezes tem conserto, sem precisar comprar roda nova.</p>
-            <a class="link-seta" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de solda em alumínio na roda.">Pedir orçamento</a></div>
-        </article>
+      <div class="serv-cat">
+        <a class="cat" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de montagem/troca de pneus.">
+          <div class="cat-foto"><img src="img/montagem.webp" alt="Profissional com luvas conferindo um pneu" width="900" height="600" loading="lazy" decoding="async"></div>
+          <div class="cat-corpo">
+            <h3>Montagem de pneus</h3>
+            <p>Comprou o pneu? A gente monta na hora.</p>
+            <span class="cat-acao">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+          </div>
+        </a>
+        <a class="cat" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de balanceamento." style="--atraso:0.08s">
+          <div class="cat-foto"><img src="img/servico-balanceamento.webp" alt="Profissional encaixando uma roda de carro na máquina de balanceamento" width="469" height="426" loading="lazy" decoding="async"></div>
+          <div class="cat-corpo">
+            <h3>Balanceamento</h3>
+            <p>Chega de volante tremendo. Roda balanceada, viagem tranquila.</p>
+            <span class="cat-acao">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+          </div>
+        </a>
+        <a class="cat" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de vulcanização/conserto de pneu." style="--atraso:0.16s">
+          <div class="cat-foto"><img src="img/servico-vulcanizacao.webp" alt="Mãos colocando reparo em um pneu furado" width="900" height="900" loading="lazy" decoding="async"></div>
+          <div class="cat-corpo">
+            <h3>Vulcanização e borracharia</h3>
+            <p>Furou ou cortou? Se der pra consertar, a gente conserta e você não gasta com pneu novo.</p>
+            <span class="cat-acao">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+          </div>
+        </a>
+        <a class="cat" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de serviço para a minha moto.">
+          <div class="cat-foto"><img src="img/servico-motos.webp" alt="Mecânico de luvas trabalhando na roda dianteira de uma moto" width="736" height="1277" loading="lazy" decoding="async"></div>
+          <div class="cat-corpo">
+            <h3>Serviços para motos</h3>
+            <p>Pneu, câmara e manutenção pra sua moto, no mesmo lugar onde você cuida do carro.</p>
+            <span class="cat-acao">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+          </div>
+        </a>
+        <a class="cat" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de recuperação de rodas." style="--atraso:0.08s">
+          <div class="cat-foto"><img src="img/servico-recuperacao.webp" alt="Profissional de luvas lixando a borda de uma roda de liga leve" width="900" height="1350" loading="lazy" decoding="async"></div>
+          <div class="cat-corpo">
+            <h3>Recuperação de rodas</h3>
+            <p>Roda amassada, riscada ou trincada? A gente avalia e, se tiver jeito, deixa ela inteira de novo.</p>
+            <span class="cat-acao">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+          </div>
+        </a>
+        <a class="cat" href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e quero um orçamento de solda em alumínio na roda." style="--atraso:0.16s">
+          <div class="cat-foto"><img src="img/servico-solda.webp" alt="Faíscas de solda sobre uma roda de alumínio" width="236" height="354" loading="lazy" decoding="async"></div>
+          <div class="cat-corpo">
+            <h3>Solda em alumínio</h3>
+            <p>Trinca em roda de liga leve muitas vezes tem conserto, sem precisar comprar roda nova.</p>
+            <span class="cat-acao">Pedir orçamento <svg class="ico" aria-hidden="true"><use href="#i-seta"/></svg></span>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -808,7 +826,7 @@
     wa.classList.toggle('visivel', y > hero.offsetHeight * 0.6);
   }
   window.addEventListener('scroll', aoRolar, { passive: true }); aoRolar();
-  var FOTOS = '.card-foto, .destaque-foto, .sobre-foto, .galeria button';
+  var FOTOS = '.card-foto, .cat-foto, .destaque-foto, .sobre-foto, .galeria button';
   window.addEventListener('beforeprint', function () { document.querySelectorAll(FOTOS).forEach(function (el) { el.classList.add('visto'); }); });
   function fecharMenu() { menu.classList.remove('aberto'); botao.setAttribute('aria-expanded', 'false'); botao.setAttribute('aria-label', 'Abrir menu'); }
   botao.addEventListener('click', function () {
