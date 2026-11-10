@@ -199,19 +199,25 @@
   @media (min-width: 768px) { .cat-foto { aspect-ratio: 1 / 1; } .cat-corpo { padding: 24px; } }
   @media (min-width: 1024px) { .serv-cat { grid-template-columns: repeat(3, 1fr); } }
 
-  /* Marcas: faixa laranja */
-  .marcas { background: var(--laranja); color: var(--preto); padding-block: clamp(64px, 8vw, 100px); --tinta: var(--preto); --texto: var(--preto); --link: var(--preto); --foco: var(--preto); }
-  .marcas-linha { display: grid; grid-template-columns: minmax(240px, .75fr) 2fr; gap: 32px 56px; align-items: start; }
-  .marcas .h2 { font-size: clamp(2.2rem, 4.2vw, 3.3rem); }
-  .marcas-grupos { display: grid; gap: 26px; }
-  .marcas-grupos h3 { font-family: var(--corpo); text-transform: none; font-size: 1rem; font-weight: 700; line-height: 1.3; margin-bottom: 10px; }
-  .marcas-lista { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; list-style: none; padding: 0; }
-  .marca-item { min-height: 88px; display: grid; place-items: center; background: var(--branco); padding: 16px 18px; }
-  .marca-item img { width: auto; max-width: 100%; max-height: 36px; }
-  .marca-item img.alto { max-height: 56px; }
-  .marca-texto { font-family: var(--titulo); font-weight: 700; font-style: italic; font-size: clamp(1.15rem, 1.5vw, 1.4rem); line-height: 1; color: var(--preto); text-transform: uppercase; }
-  .marca-consulta { grid-column: span 3; place-items: center start; background: transparent; box-shadow: inset 0 0 0 2px var(--preto); color: var(--preto); font-weight: 500; }
+  /* Marcas: faixa laranja com carrossel infinito da direita para a esquerda */
+  .marcas { background: var(--laranja); color: var(--preto); padding-block: clamp(64px, 8vw, 100px); overflow: hidden; --tinta: var(--preto); --texto: var(--preto); --link: var(--preto); --foco: var(--preto); }
+  .marcas .h2 { font-size: clamp(2.2rem, 4.6vw, 3.6rem); max-width: 16em; }
+  .marcas-trilho { margin-block: clamp(32px, 4vw, 48px); overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .marcas-faixa { display: flex; width: max-content; animation: marcas-passam 32s linear infinite; }
+  .marcas-trilho:hover .marcas-faixa { animation-play-state: paused; }
+  .marcas-lista { display: flex; gap: 16px; padding: 0 16px 0 0; margin: 0; list-style: none; }
+  .marca-item { width: 200px; height: 100px; flex: none; display: grid; place-items: center; background: var(--branco); padding: 18px 22px; }
+  .marca-item img { width: auto; max-width: 100%; max-height: 38px; }
+  .marca-item img.alto { max-height: 60px; }
+  @keyframes marcas-passam { to { transform: translateX(-50%); } }
+  .marca-consulta { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 16px 22px; box-shadow: inset 0 0 0 2px var(--preto); font-weight: 500; }
   .marca-consulta a { color: var(--preto); font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  @media (prefers-reduced-motion: reduce) {
+    .marcas-trilho { -webkit-mask-image: none; mask-image: none; }
+    .marcas-faixa { width: min(1200px, 100% - 40px); margin-inline: auto; }
+    .marcas-lista { flex-wrap: wrap; padding: 0; }
+    .marcas-lista[aria-hidden="true"] { display: none; }
+  }
 
   /* Destaque recuperação de rodas */
   .destaque { overflow: hidden; }
@@ -245,7 +251,7 @@
   .fato strong { display: inline-flex; align-items: center; gap: 6px; font-family: var(--titulo); font-weight: 700; font-size: clamp(2.2rem, 3.6vw, 3rem); line-height: 1; color: var(--branco); }
   .fato strong .ico { width: .6em; height: .6em; color: var(--laranja); }
   .fato span { display: block; font-size: .88rem; color: var(--metal); margin-top: 8px; }
-  .sobre-foto { position: relative; }
+  .sobre-foto { position: relative; overflow: hidden; }
   .sobre-foto img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
   .sobre-foto figcaption { position: absolute; right: 0; bottom: 0; background: rgba(8,8,8,.85); padding: 10px 16px; font-size: .85rem; color: var(--texto); }
 
@@ -366,7 +372,6 @@
     .aval-grade { grid-template-columns: 1fr; }
     .nota-painel { flex-direction: row; flex-wrap: wrap; align-items: center; }
     .rodape-grade { grid-template-columns: 1fr 1fr; }
-    .marcas-linha { grid-template-columns: 1fr; }
   }
   @media (max-width: 920px) {
     :root { --topo: 68px; }
@@ -409,9 +414,6 @@
     .prod-grade > :nth-child(n) { grid-column: 1 / -1; }
     .card.capa { min-height: 340px; }
     .card-corpo { padding: 18px 20px 22px; }
-    .marcas-lista { grid-template-columns: 1fr 1fr; }
-    .marca-consulta, .marca-item:last-child:nth-child(odd) { grid-column: 1 / -1; }
-    .marca-texto { font-size: 1.3rem; }
     .fatos { grid-template-columns: 1fr 1fr; }
     .fato { padding: 16px; }
     .nota-num { font-size: 5rem; }
@@ -424,6 +426,9 @@
     .rodape-grade { grid-template-columns: 1fr; gap: 30px; }
     .wa-flutuante { right: 14px; bottom: 14px; width: 54px; height: 54px; }
     .lightbox-nav { top: auto; bottom: 16px; translate: none; }
+    .marca-item { width: 160px; height: 84px; padding: 14px 18px; }
+    .marca-item img { max-height: 32px; }
+    .marca-item img.alto { max-height: 50px; }
   }
 </style>
 </head>
@@ -533,31 +538,36 @@
   </section>
 
   <!-- ===== MARCAS =====
-       Marcas vistas nas placas da loja. Para trocar o nome por logo, coloque dentro do <li>:
-       <img src="img/marcas/NOME.svg" alt="NOME" loading="lazy"> -->
+       Carrossel infinito: a segunda lista é cópia da primeira (só para o loop não ter emenda).
+       Para mudar as marcas, altere as duas listas igual. Logos ficam em img/marcas/. -->
   <section class="marcas" aria-labelledby="marcas-titulo">
-    <div class="envolve marcas-linha">
+    <div class="envolve">
       <h2 class="h2" id="marcas-titulo">Pneu e bateria das marcas que você já conhece.</h2>
-      <div class="marcas-grupos">
-        <div>
-          <h3>Pneus</h3>
-          <ul class="marcas-lista">
-            <li class="marca-item"><img src="img/marcas/pirelli.svg" alt="Pirelli" width="800" height="209" loading="lazy"></li>
-            <li class="marca-item"><img src="img/marcas/goodyear.webp" alt="Goodyear" width="502" height="120" loading="lazy"></li>
-            <li class="marca-item"><img src="img/marcas/bridgestone.svg" alt="Bridgestone" width="1000" height="123" loading="lazy"></li>
-            <li class="marca-item"><img src="img/marcas/firestone.webp" alt="Firestone" width="537" height="97" loading="lazy"></li>
-            <li class="marca-item"><img src="img/marcas/longway.webp" alt="Longway Pneus" width="194" height="46" loading="lazy"></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Baterias</h3>
-          <ul class="marcas-lista">
-            <li class="marca-item"><img src="img/marcas/moura.svg" alt="Moura" width="500" height="139" loading="lazy"></li>
-            <li class="marca-item"><img class="alto" src="img/marcas/lider.webp" alt="Lider Baterias" width="197" height="160" loading="lazy"></li>
-            <li class="marca-item marca-consulta"><span>Procurando outra marca?<br><a href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e queria saber se vocês têm pneu ou bateria da marca: ">Perguntar pelo WhatsApp</a></span></li>
-          </ul>
-        </div>
+    </div>
+    <div class="marcas-trilho">
+      <div class="marcas-faixa">
+        <ul class="marcas-lista">
+          <li class="marca-item"><img src="img/marcas/pirelli.svg" alt="Pirelli" width="800" height="209"></li>
+          <li class="marca-item"><img src="img/marcas/goodyear.webp" alt="Goodyear" width="502" height="120"></li>
+          <li class="marca-item"><img src="img/marcas/bridgestone.svg" alt="Bridgestone" width="1000" height="123"></li>
+          <li class="marca-item"><img src="img/marcas/firestone.webp" alt="Firestone" width="537" height="97"></li>
+          <li class="marca-item"><img src="img/marcas/longway.webp" alt="Longway Pneus" width="194" height="46"></li>
+          <li class="marca-item"><img src="img/marcas/moura.svg" alt="Moura" width="500" height="139"></li>
+          <li class="marca-item"><img class="alto" src="img/marcas/lider.webp" alt="Lider Baterias" width="197" height="160"></li>
+        </ul>
+        <ul class="marcas-lista" aria-hidden="true">
+          <li class="marca-item"><img src="img/marcas/pirelli.svg" alt="" width="800" height="209"></li>
+          <li class="marca-item"><img src="img/marcas/goodyear.webp" alt="" width="502" height="120"></li>
+          <li class="marca-item"><img src="img/marcas/bridgestone.svg" alt="" width="1000" height="123"></li>
+          <li class="marca-item"><img src="img/marcas/firestone.webp" alt="" width="537" height="97"></li>
+          <li class="marca-item"><img src="img/marcas/longway.webp" alt="" width="194" height="46"></li>
+          <li class="marca-item"><img src="img/marcas/moura.svg" alt="" width="500" height="139"></li>
+          <li class="marca-item"><img class="alto" src="img/marcas/lider.webp" alt="" width="197" height="160"></li>
+        </ul>
       </div>
+    </div>
+    <div class="envolve">
+      <p class="marca-consulta">Procurando outra marca? <a href="https://wa.me/5515996040822" data-wa="Olá! Vim pelo site e queria saber se vocês têm pneu ou bateria da marca: ">Perguntar pelo WhatsApp</a></p>
     </div>
   </section>
 
