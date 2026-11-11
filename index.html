@@ -118,7 +118,6 @@
   .marca { display: flex; align-items: center; flex: none; }
   .marca img { height: 66px; width: auto; transition: height .3s var(--ease); }
   .topo.rolou .marca img { height: 52px; }
-  .marca .compacta { display: none; }
   .menu { display: flex; align-items: center; gap: clamp(18px, 2.6vw, 34px); }
   .menu a:not(.btn) { position: relative; font-weight: 600; font-size: .95rem; color: rgba(255,255,255,.72); padding-block: 8px; transition: color .2s ease; }
   .menu a:not(.btn)::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--laranja); transform: scaleX(0) skewX(-30deg); transform-origin: left; transition: transform .25s var(--ease); }
@@ -385,9 +384,8 @@
   @media (max-width: 920px) {
     :root { --topo: 68px; }
     .topo.rolou .envolve { height: 64px; }
-    .marca .cheia { display: none; }
-    .marca .compacta { display: block; height: 36px; }
-    .topo.rolou .marca img.compacta { height: 32px; }
+    .marca img { height: 52px; }
+    .topo.rolou .marca img { height: 46px; }
     .abre-menu { display: grid; }
     .menu { position: fixed; inset: var(--topo) 0 auto 0; flex-direction: column; align-items: stretch; gap: 0; padding: 12px 20px 26px; background: var(--preto); border-bottom: 2px solid var(--laranja); transform: translateY(-12px); opacity: 0; visibility: hidden; transition: opacity .25s, transform .25s var(--ease), visibility 0s .25s; max-height: calc(100svh - var(--topo)); overflow-y: auto; }
     .topo.rolou .menu { top: 64px; }
@@ -470,8 +468,7 @@
 <header class="topo" id="topo">
   <div class="envolve">
     <a class="marca" href="#inicio" aria-label="Nascar 7 Rodas e Pneus, voltar ao início">
-      <picture class="cheia"><source srcset="img/logo-nascar7.webp" type="image/webp"><img class="cheia" src="img/logo-nascar7.png" alt="Nascar 7 Rodas e Pneus" width="640" height="337"></picture>
-      <picture><source srcset="img/logo-nascar7-compacta.webp" type="image/webp"><img class="compacta" src="img/logo-nascar7-compacta.png" alt="Nascar 7 Rodas e Pneus" width="420" height="100"></picture>
+      <picture><source srcset="img/logo-nascar7.webp" type="image/webp"><img src="img/logo-nascar7.png" alt="Nascar 7 Rodas e Pneus" width="640" height="337"></picture>
     </a>
     <button class="abre-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span></button>
     <nav class="menu" id="menu" aria-label="Navegação principal">
